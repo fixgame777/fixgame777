@@ -1,7 +1,6 @@
 // ====================================================
-// MARKET DATA – EASY EDIT SECTION
-// Change only the numbers inside the quotes below.
-// After editing, update the version number in index.html (v=...)
+// MARKET DATA – EDIT THESE NUMBERS, SAVE, AND REFRESH
+// Changes appear instantly – no version number to update.
 // ====================================================
 
 const marketConfig = {
@@ -13,10 +12,10 @@ const marketConfig = {
       time: "2:30 PM",
       labels: { otc: "O.T.C", support: "SUPPORT", jodi: "JODI", pannel: "PANNEL" },
       numbers: {
-        otc: "5* 3* 6* 2*",
-        support: "5* 3*",
-        jodi: "53 35 62 26",
-        pannel: "123* 145* 245* 356*"
+        otc: "5* 3* 6* 2*",        // ← change these
+        support: "5* 3*",           // ← change these
+        jodi: "53 35 62 26",        // ← change these
+        pannel: "123* 145* 245* 356*" // ← change these
       }
     },
     sridevi: {
