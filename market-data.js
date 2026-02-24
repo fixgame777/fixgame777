@@ -1,6 +1,7 @@
 // ====================================================
 // MARKET DATA – EASY EDIT SECTION
 // Change only the numbers inside the quotes below.
+// After editing, update the version number in index.html (v=...)
 // ====================================================
 
 const marketConfig = {
@@ -12,8 +13,8 @@ const marketConfig = {
       time: "2:30 PM",
       labels: { otc: "O.T.C", support: "SUPPORT", jodi: "JODI", pannel: "PANNEL" },
       numbers: {
-        otc: "5",
-        support: "3",
+        otc: "5* 3* 6* 2*",
+        support: "5* 3*",
         jodi: "53 35 62 26",
         pannel: "123* 145* 245* 356*"
       }
@@ -86,5 +87,5 @@ const marketConfig = {
     }
   },
 
-  noticeBoard: "📢 Welcome to GANESH platform.\nNew results every day at scheduled times.\nFollow us for updates."
+  noticeBoard: "📢 Welcome to FIX GAME 777 platform.\nNew results every day at scheduled times.\nFollow us for updates."
 };
