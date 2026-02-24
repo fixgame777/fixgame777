@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>GANESH · premium matka</title>
-  <!-- Font Awesome 6 (free) -->
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Font: Inter (ultra clean) -->
+  <!-- Google Font: Plus Jakarta Sans (modern, clean) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -18,32 +18,32 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at 10% 30%, #1e1a2e, #0c0b14);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(145deg, #faf7f2 0%, #f5efe6 100%);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 1rem;
-      color: #f0eae1;
+      color: #2e2b27;
     }
 
     #app {
       width: 100%;
-      max-width: 440px;
+      max-width: 460px;
       margin: 0 auto;
     }
 
-    /* glass‑card style */
+    /* soft card style */
     .page {
-      background: rgba(20, 18, 28, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(212, 175, 55, 0.2);
       border-radius: 2.5rem;
       padding: 2rem 1.5rem;
-      box-shadow: 0 30px 50px -20px rgba(0,0,0,0.8), 0 0 0 1px rgba(212, 175, 55, 0.15) inset;
-      animation: fadeReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 25px 45px -18px rgba(0,0,0,0.2), 0 0 0 1px rgba(212,175,55,0.1) inset;
+      animation: appear 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       display: none;
     }
 
@@ -51,60 +51,54 @@
       display: block;
     }
 
-    @keyframes fadeReveal {
-      0% { opacity: 0; transform: translateY(20px) scale(0.98); }
-      100% { opacity: 1; transform: translateY(0) scale(1); }
+    @keyframes appear {
+      0% { opacity: 0; transform: scale(0.98) translateY(10px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
     }
 
     h2 {
       font-size: 2.4rem;
       font-weight: 700;
-      background: linear-gradient(135deg, #f5e7c8, #d4af37 70%);
+      background: linear-gradient(135deg, #b48b3a, #7a5c2e);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
       text-align: center;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
       letter-spacing: -0.02em;
-      filter: drop-shadow(0 2px 4px rgba(212,175,55,0.3));
     }
 
-    .gold-glow {
-      color: #d4af37;
-      text-shadow: 0 0 8px rgba(212,175,55,0.6);
+    .gold {
+      color: #c9a34b;
     }
 
-    /* logo banner – rectangular with golden border */
     .logo-banner {
       width: 100%;
-      margin: 1rem 0 1.8rem;
+      margin: 1rem 0 1.5rem;
       border-radius: 2rem;
       overflow: hidden;
-      border: 2px solid #d4af37;
-      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.8), 0 0 0 1px #d4af37 inset;
-      background: #0e0c17;
+      border: 2px solid #e0c282;
+      box-shadow: 0 12px 24px -16px rgba(0,0,0,0.3);
+      background: #fffaf0;
     }
 
     .logo-banner img {
       width: 100%;
       height: auto;
       display: block;
-      filter: brightness(1.02) contrast(1.05);
     }
 
     .big-image {
       width: 100%;
       border-radius: 2rem;
-      border: 2px solid #d4af37;
+      border: 2px solid #e0c282;
       overflow: hidden;
       margin: 1.2rem 0;
-      box-shadow: 0 15px 25px -15px black;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 15px 25px -18px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
     }
 
     .big-image:hover {
-      transform: scale(1.02);
-      box-shadow: 0 20px 30px -10px #d4af3740;
+      transform: scale(1.01);
     }
 
     .big-image img {
@@ -123,7 +117,7 @@
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: #c0b28b;
+      color: #8f7a5c;
       margin-bottom: 0.4rem;
       margin-left: 0.8rem;
     }
@@ -137,36 +131,34 @@
       left: 1.2rem;
       top: 50%;
       transform: translateY(-50%);
-      color: #d4af37;
+      color: #c9a34b;
       font-size: 1.2rem;
-      opacity: 0.9;
-      z-index: 2;
     }
 
     .input-wrapper input {
       width: 100%;
-      background: #15121f;
-      border: 1px solid #3e3852;
+      background: white;
+      border: 1px solid #e5d9c8;
       border-radius: 3rem;
       padding: 1.2rem 1.5rem 1.2rem 3.2rem;
       font-size: 1rem;
-      font-family: 'Inter', sans-serif;
-      color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #2e2b27;
       outline: none;
       transition: border 0.2s, box-shadow 0.2s;
-      box-shadow: inset 0 4px 10px rgba(0,0,0,0.6);
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
     }
 
     .input-wrapper input:focus {
-      border-color: #d4af37;
-      box-shadow: 0 0 0 3px rgba(212,175,55,0.2), inset 0 2px 8px black;
+      border-color: #c9a34b;
+      box-shadow: 0 0 0 3px rgba(201,163,75,0.15), inset 0 2px 5px rgba(0,0,0,0.02);
     }
 
     .input-wrapper input::placeholder {
-      color: #5f5470;
+      color: #b7aa99;
       font-weight: 300;
     }
-.btn {
+    .btn {
   display: block;
   width: 100%;
   padding: 1.2rem;
@@ -174,16 +166,16 @@
   border-radius: 3rem;
   font-weight: 700;
   font-size: 1.2rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
   margin: 1.8rem 0 1.2rem;
-  background: linear-gradient(135deg, #d4af37, #b48c2c);
-  color: #0f0d17;
-  border: 1px solid rgba(255,245,190,0.5);
-  box-shadow: 0 15px 25px -12px #d4af37, 0 4px 12px rgba(0,0,0,0.6);
+  background: linear-gradient(135deg, #c9a34b, #a8843c);
+  color: white;
+  border: 1px solid rgba(255,245,210,0.5);
+  box-shadow: 0 15px 25px -12px #c9a34b, 0 4px 12px rgba(0,0,0,0.1);
   position: relative;
   overflow: hidden;
 }
@@ -195,7 +187,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,240,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
   transition: left 0.5s;
 }
 
@@ -205,7 +197,7 @@
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 22px 30px -10px #e6c45e, 0 6px 18px black;
+  box-shadow: 0 22px 30px -10px #c9a34b;
 }
 
 .btn-small {
@@ -215,31 +207,31 @@
 }
 
 .btn:disabled {
-  opacity: 0.4;
+  opacity: 0.5;
   pointer-events: none;
 }
 
 .contact-card {
-  background: rgba(18, 15, 26, 0.7);
+  background: rgba(250, 242, 232, 0.8);
   border-radius: 2rem;
   padding: 1.4rem 1rem;
   margin: 1.8rem 0;
-  border: 1px solid #d4af37;
+  border: 1px solid #e0c282;
   text-align: center;
-  box-shadow: 0 8px 20px -8px black;
+  box-shadow: 0 8px 20px -12px rgba(0,0,0,0.2);
 }
 
 .whatsapp-link {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: #1f1b2b;
-  color: #f5e5c1;
+  background: white;
+  color: #4a3f33;
   padding: 0.7rem 1.8rem;
   border-radius: 3rem;
   text-decoration: none;
   font-weight: 600;
-  border: 1px solid #d4af37;
+  border: 1px solid #c9a34b;
   margin: 0.5rem 0;
   transition: background 0.2s, transform 0.1s;
 }
@@ -250,7 +242,7 @@
 }
 
 .whatsapp-link:hover {
-  background: #2b253b;
+  background: #f5efe6;
   transform: scale(1.02);
 }
 
@@ -263,27 +255,27 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.2rem;
-  background: rgba(20, 17, 28, 0.8);
+  background: white;
   border-radius: 2rem;
   margin-bottom: 0.8rem;
-  border: 1px solid #4a435a;
+  border: 1px solid #efe2d0;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.02);
 }
 
 .market-item:hover {
   transform: translateX(8px);
-  border-color: #d4af37;
-  box-shadow: 0 8px 16px rgba(212,175,55,0.2);
+  border-color: #c9a34b;
+  box-shadow: 0 8px 16px rgba(201,163,75,0.1);
 }
 
 .market-item::before {
   content: '\f054';
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
-  color: #d4af37;
+  color: #c9a34b;
   margin-right: 0.8rem;
   font-size: 0.9rem;
   transition: transform 0.2s;
@@ -294,26 +286,25 @@
 }
 
 .market-time {
-  background: #d4af37;
-  color: #0f0d17;
+  background: #f5efe6;
+  color: #7a623a;
   padding: 0.3rem 1rem;
   border-radius: 2rem;
   font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
+  font-weight: 600;
 }
 
 .notice {
-  background: #0e0b17;
-  color: #e5d9b5;
+  background: #fcf9f4;
+  color: #4a4035;
   padding: 1.2rem;
   border-radius: 2rem;
   font-size: 0.85rem;
   line-height: 1.6;
   margin: 1.8rem 0;
-  border-left: 6px solid #d4af37;
+  border-left: 6px solid #c9a34b;
   white-space: pre-line;
-  box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
+  box-shadow: inset 0 0 15px rgba(255,245,210,0.5);
 }
 
 .plan-box {
@@ -324,35 +315,35 @@
 
 .plan {
   flex: 1;
-  background: #181524;
-  border: 2px solid #4a405a;
+  background: white;
+  border: 2px solid #efe2d0;
   border-radius: 2rem;
   padding: 1.2rem 0.5rem;
   text-align: center;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
-  color: #bfb099;
+  color: #7a6b58;
 }
 
 .plan.selected {
-  border-color: #d4af37;
-  background: #2a2340;
-  color: #f5e7c8;
+  border-color: #c9a34b;
+  background: #fcf3e0;
+  color: #5e4f3a;
   transform: scale(1.02);
-  box-shadow: 0 10px 20px -8px #d4af37;
+  box-shadow: 0 10px 20px -12px #c9a34b;
 }
+        .qr-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 2rem;
+      border: 3px solid #e0c282;
+      box-shadow: 0 15px 25px -12px rgba(0,0,0,0.15);
+      object-fit: cover;
+      display: block;
+      margin: 1.5rem auto;
+    }
 
-.qr-image {
-  width: 180px;
-  height: 180px;
-  border-radius: 2rem;
-  border: 3px solid #d4af37;
-  box-shadow: 0 15px 25px -12px black;
-  object-fit: cover;
-  display: block;
-  margin: 1.5rem auto;
-}
     .detail-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -361,44 +352,43 @@
     }
 
     .detail-card {
-      background: #151225;
-      border: 1px solid #d4af37;
+      background: white;
+      border: 1px solid #e0c282;
       border-radius: 1.8rem;
-      padding: 1.2rem 0.8rem;
+      padding: 1.2rem 0.5rem;
       text-align: center;
       transition: all 0.2s;
-      box-shadow: 0 12px 20px -12px black;
+      box-shadow: 0 12px 20px -16px rgba(0,0,0,0.1);
     }
 
     .detail-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 18px 25px -10px #d4af37;
+      box-shadow: 0 18px 25px -12px #c9a34b;
     }
 
     .detail-card h4 {
-      color: #d4af37;
+      color: #a8843c;
       margin-bottom: 0.5rem;
       font-weight: 600;
       font-size: 1rem;
-      letter-spacing: 0.5px;
     }
 
     .detail-numbers {
       font-size: 1.3rem;
       font-weight: 700;
-      color: #f0e2c6;
+      color: #4a3f33;
     }
 
     .nav-bar {
       display: flex;
       justify-content: space-between;
-      margin-top: 1.5rem;
+      margin: 1.5rem 0 0.5rem;
     }
 
     .nav-btn {
       background: none;
       border: none;
-      color: #d4af37;
+      color: #a8843c;
       font-weight: 600;
       font-size: 1rem;
       display: flex;
@@ -408,14 +398,24 @@
       padding: 0.6rem 1.2rem;
       border-radius: 3rem;
       transition: all 0.2s;
-      background: rgba(212,175,55,0.05);
-      border: 1px solid rgba(212,175,55,0.3);
+      background: rgba(201,163,75,0.05);
+      border: 1px solid rgba(201,163,75,0.2);
     }
 
     .nav-btn:hover {
-      background: rgba(212,175,55,0.15);
+      background: rgba(201,163,75,0.12);
       transform: scale(1.05);
-      border-color: #d4af37;
+      border-color: #c9a34b;
+    }
+
+    .extra-refresh {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+    }
+
+    .extra-refresh .nav-btn {
+      background: rgba(201,163,75,0.08);
     }
 
     .timer-message {
@@ -424,65 +424,56 @@
       margin: 1rem 0;
       padding: 0.8rem;
       border-radius: 3rem;
-      background: #1f1b2b;
-      border: 1px solid #d4af37;
-      color: #f5e1b0;
-      animation: softPulse 1.5s infinite;
+      background: #fcf3e0;
+      border: 1px solid #c9a34b;
+      color: #5e4f3a;
+      animation: pulseSoft 1.5s infinite;
     }
 
-    @keyframes softPulse {
+    @keyframes pulseSoft {
       0% { opacity: 1; }
-      50% { opacity: 0.7; }
+      50% { opacity: 0.8; }
       100% { opacity: 1; }
     }
 
     .error-message {
-      color: #ffa07a;
+      color: #b15545;
       font-size: 0.9rem;
       text-align: center;
       margin: -0.5rem 0 1rem;
-      background: #2a1a1a;
+      background: #ffefed;
       padding: 0.6rem;
       border-radius: 3rem;
-      border: 1px solid #d4af37;
+      border: 1px solid #e0b282;
     }
 
     .disclaimer {
       font-size: 0.6rem;
-      color: #948c7a;
+      color: #998f82;
       margin-top: 2rem;
       padding-top: 1rem;
-      border-top: 1px solid rgba(212,175,55,0.3);
+      border-top: 1px solid #e5d9c8;
       text-align: justify;
       max-height: 100px;
       overflow-y: auto;
-      scrollbar-width: thin;
-      scrollbar-color: #d4af37 #221f2c;
-    }
-
-    .disclaimer::-webkit-scrollbar {
-      width: 4px;
-    }
-    .disclaimer::-webkit-scrollbar-track {
-      background: #221f2c;
-    }
-    .disclaimer::-webkit-scrollbar-thumb {
-      background: #d4af37;
-      border-radius: 10px;
     }
   </style>
 </head>
 <body>
   <div id="app">
-    <!-- LOGIN PAGE with headline GANESH -->
+    <!-- LOGIN PAGE -->
     <div id="login-page" class="page active">
+      <!-- extra refresh at top -->
+      <div class="extra-refresh">
+        <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button>
+      </div>
       <h2>GANESH</h2>
       <div class="logo-banner">
         <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/c33ecce6-da20-4047-a0ce-df100fbd6657.png" alt="Ganesh Logo">
       </div>
       <div style="text-align:center; margin-bottom:1.5rem;">
-        <div style="font-weight:500; color:#c0b28b;">MOST TRUSTED MATKA GUESSING</div>
-        <div style="font-size:0.85rem; color:#9e8f72;">DATE FIX GAME PLATFORM</div>
+        <div style="font-weight:500; color:#8f7a5c;">MOST TRUSTED MATKA GUESSING</div>
+        <div style="font-size:0.85rem; color:#b7aa99;">DATE FIX GAME PLATFORM</div>
       </div>
 
       <div class="input-group">
@@ -510,29 +501,35 @@
           <i class="fab fa-whatsapp"></i> WhatsApp +917353547650
         </a>
         <div style="margin-top:0.8rem;">
-          <i class="fas fa-phone-alt gold-glow"></i> <strong style="color:#d4af37;">OR CALL</strong> +917353547650
+          <i class="fas fa-phone-alt gold"></i> <strong style="color:#a8843c;">OR CALL</strong> +917353547650
         </div>
       </div>
 
       <div class="disclaimer">
-        <strong style="color:#d4af37;">-DISCLAIMER:-</strong> Visiting this site and browsing it is strictly recommended at your own risk. Every information available here is only according to informational purpose and based on astrology and number calculations. We are no associated or affiliated with any illegal Matka business. We make sure we follow all rules and regulations of the regions where you are accessing the website. There are also chances that the website may be banned in your area and after that if you are using it, you are solely dependable and responsible for any damage, loss or legal action taken. If you are the one who does not like our disclaimer it is advised that you leave our website immediately. Copying of any information/contents posted on the website is strictly prohibited and against the law.
+        <strong style="color:#a8843c;">-DISCLAIMER:-</strong> Visiting this site and browsing it is strictly recommended at your own risk. Every information available here is only according to informational purpose and based on astrology and number calculations. We are no associated or affiliated with any illegal Matka business. We make sure we follow all rules and regulations of the regions where you are accessing the website. There are also chances that the website may be banned in your area and after that if you are using it, you are solely dependable and responsible for any damage, loss or legal action taken. If you are the one who does not like our disclaimer it is advised that you leave our website immediately. Copying of any information/contents posted on the website is strictly prohibited and against the law.
+      </div>
+      <!-- extra refresh at bottom -->
+      <div class="extra-refresh" style="justify-content:center; margin-top:1rem;">
+        <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button>
       </div>
     </div>
     <!-- end login page -->
-<!-- DASHBOARD PAGE -->
+    <!-- DASHBOARD PAGE -->
 <div id="dashboard-page" class="page">
+  <div class="extra-refresh">
+    <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button>
+  </div>
   <div style="display:flex; justify-content:space-between; align-items:center;">
     <h2 style="margin:0; font-size:2rem;">DASHBOARD</h2>
     <div style="text-align:right;">
-      <span id="live-date" style="display:block; font-size:0.75rem; color:#c0b28b;"></span>
-      <span id="live-time" style="font-weight:600; color:#d4af37; font-size:1.1rem;"></span>
+      <span id="live-date" style="display:block; font-size:0.75rem; color:#8f7a5c;"></span>
+      <span id="live-time" style="font-weight:600; color:#a8843c; font-size:1.1rem;"></span>
     </div>
   </div>
   <div class="logo-banner">
     <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/c33ecce6-da20-4047-a0ce-df100fbd6657.png" alt="Ganesh Logo">
   </div>
 
-  <!-- dashboard images (keep your links) -->
   <div class="big-image">
     <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/e6d32229-8638-4d0d-8168-0ecf26c97511.jpg" alt="Dashboard 1">
   </div>
@@ -551,19 +548,24 @@
   </div>
 
   <div class="notice" id="dashboard-notice">
-    <strong style="color:#d4af37;">📢 NOTICE BOARD</strong><br>
-    <!-- filled by js -->
+    <strong style="color:#a8843c;">📢 NOTICE BOARD</strong><br>
   </div>
 
   <button class="btn btn-small" id="goto-subscription">SUBSCRIPTION</button>
   <div class="nav-bar">
-    <button class="nav-btn" id="refresh-dash"><i class="fas fa-sync-alt"></i> REFRESH</button>
+    <button class="nav-btn" id="refresh-dash-bottom"><i class="fas fa-sync-alt"></i> REFRESH</button>
     <button class="nav-btn" id="logout"><i class="fas fa-sign-out-alt"></i> LOGOUT</button>
+  </div>
+  <div class="extra-refresh" style="justify-content:center; margin-top:0.5rem;">
+    <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button>
   </div>
 </div>
 
 <!-- MARKETS PAGE -->
 <div id="markets-page" class="page">
+  <div class="extra-refresh">
+    <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button>
+  </div>
   <h2>📊 MARKETS</h2>
   <div class="market-list">
     <div class="market-item" data-market="kalyan">KALYAN <span class="market-time">2:30 PM</span></div>
@@ -575,26 +577,37 @@
     <div class="market-item" data-market="mainbazar">MAIN BAZAR <span class="market-time">8:30 PM</span></div>
   </div>
   <div class="notice" id="markets-notice">
-    <strong style="color:#d4af37;">📢 NOTICE BOARD</strong><br>
+    <strong style="color:#a8843c;">📢 NOTICE BOARD</strong><br>
   </div>
   <div class="nav-bar">
     <button class="nav-btn" id="back-to-dash"><i class="fas fa-arrow-left"></i> BACK</button>
-    <button class="nav-btn" id="refresh-markets"><i class="fas fa-sync-alt"></i> REFRESH</button>
+    <button class="nav-btn" id="refresh-markets-bottom"><i class="fas fa-sync-alt"></i> REFRESH</button>
+  </div>
+  <div class="extra-refresh" style="justify-content:center; margin-top:0.5rem;">
+    <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button>
   </div>
 </div>
 
 <!-- MARKET DETAIL PAGE -->
 <div id="detail-page" class="page">
+  <div class="extra-refresh">
+    <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button>
+  </div>
   <h2 id="detail-title">KALYAN</h2>
   <div class="detail-grid" id="detail-grid"></div>
   <div class="nav-bar">
     <button class="nav-btn" id="back-to-markets"><i class="fas fa-arrow-left"></i> BACK</button>
-    <button class="nav-btn" id="refresh-detail"><i class="fas fa-sync-alt"></i> REFRESH</button>
+    <button class="nav-btn" id="refresh-detail-bottom"><i class="fas fa-sync-alt"></i> REFRESH</button>
+  </div>
+  <div class="extra-refresh" style="justify-content:center; margin-top:0.5rem;">
+    <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button>
   </div>
 </div>
   <!-- SUBSCRIPTION PAGE -->
   <div id="subscription-page" class="page">
-    <!-- top image -->
+    <div class="extra-refresh">
+      <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button>
+    </div>
     <div class="big-image">
       <img id="sub-top-img" src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/f94bbdd7-fa3c-4791-a387-18bd057b2868.jpg" alt="Top">
     </div>
@@ -605,14 +618,12 @@
         <div class="plan" id="plan-1day">1 day<br>₹1100</div>
         <div class="plan" id="plan-1week">1 week<br>₹5100</div>
       </div>
-      <p style="color:#b9a477;">Select plan and scan QR to pay</p>
+      <p style="color:#8f7a5c;">Select plan and scan QR to pay</p>
 
-      <!-- QR code image (your link) -->
       <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/0e62c615-2776-42a3-99b4-252c5fb435c1.png" alt="QR Code" class="qr-image" id="qr-code-img">
 
-      <p style="font-size:0.85rem; color:#b9a477;">Scan via PhonePe, GPay, Paytm, any UPI</p>
+      <p style="font-size:0.85rem; color:#8f7a5c;">Scan via PhonePe, GPay, Paytm, any UPI</p>
 
-      <!-- timer area -->
       <div id="timer-container" style="display: none;">
         <div class="timer-message" id="timer-message"></div>
       </div>
@@ -622,33 +633,33 @@
         <div style="font-size:0.8rem;">and wait few minutes to verify</div>
         <a href="#" class="whatsapp-link" id="payment-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp +917353547650</a>
         <div style="margin-top:0.5rem;">Or Telegram: 
-          <a href="tg://resolve?domain=rudrakshank" style="color:#d4af37;">Open in App</a> | 
-          <a href="https://t.me/rudrakshank" style="color:#d4af37;">Web</a>
+          <a href="tg://resolve?domain=rudrakshank" style="color:#a8843c;">Open in App</a> | 
+          <a href="https://t.me/rudrakshank" style="color:#a8843c;">Web</a>
         </div>
       </div>
     </div>
 
-    <!-- BACK & I HAVE PAID buttons -->
     <div class="nav-bar">
       <button class="nav-btn" id="back-from-sub"><i class="fas fa-arrow-left"></i> BACK</button>
       <button class="nav-btn" id="paid-btn">I HAVE PAID</button>
     </div>
 
-    <!-- bottom image -->
     <div class="big-image">
       <img id="sub-bottom-img" src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/c33ecce6-da20-4047-a0ce-df100fbd6657.png" alt="Bottom">
     </div>
+    <div class="extra-refresh" style="justify-content:center; margin-top:1rem;">
+      <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button>
+    </div>
   </div>
 </div>
-<!-- end #app -->
 
-<!-- Firebase SDKs (v9 compat) -->
+<!-- Firebase SDKs -->
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 
 <script>
-  // 🔥 YOUR NEW FIREBASE CONFIG
+  // 🔥 YOUR FIREBASE CONFIG
   const firebaseConfig = {
     apiKey: "AIzaSyC7mxOFOYebaxV8dAwpfP7a_Ayq7TAIbds",
     authDomain: "fixgame-fa24c.firebaseapp.com",
@@ -704,7 +715,7 @@
     },
     noticeBoard: "gsgsivdhdjissjhehehs\nhdsgywighdjsksososooss\ndveuowgdhjdjidjdjjjdjd\ngdurhdhdsjsjsjsj\ngsuwo vxgiwi vdhiw bdhek"
   };
-// ---------- Helper functions ----------
+  // ---------- Helper functions ----------
 function showPage(pageId) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById(pageId).classList.add('active');
@@ -742,7 +753,7 @@ function applyMarketTimesAndNotices() {
     }
   });
   document.querySelectorAll('.notice').forEach(el => {
-    el.innerHTML = `<strong style="color:#d4af37;">📢 NOTICE BOARD</strong><br>${config.noticeBoard.replace(/\n/g,'<br>')}`;
+    el.innerHTML = `<strong style="color:#a8843c;">📢 NOTICE BOARD</strong><br>${config.noticeBoard.replace(/\n/g,'<br>')}`;
   });
 }
 
@@ -804,8 +815,8 @@ function startTimer() {
 if (!document.getElementById('loading-screen')) {
   const ld = document.createElement('div');
   ld.id = 'loading-screen';
-  ld.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:radial-gradient(circle at 30% 30%, #1e1a2e, #0c0b14); display:flex; align-items:center; justify-content:center; z-index:9999; transition:opacity 0.3s;';
-  ld.innerHTML = '<div style="text-align:center; color:#d4af37;"><div style="font-size:3rem; margin-bottom:1rem;">🕉️</div><div style="font-weight:300;">loading GANESH ...</div></div>';
+  ld.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(250,247,242,0.95); display:flex; align-items:center; justify-content:center; z-index:9999; transition:opacity 0.3s;';
+  ld.innerHTML = '<div style="text-align:center; color:#a8843c;"><div style="font-size:3rem; margin-bottom:1rem;">🕉️</div><div style="font-weight:300;">loading GANESH ...</div></div>';
   document.body.appendChild(ld);
 }
 function hideLoading() {
@@ -813,7 +824,7 @@ function hideLoading() {
   if (loader) { loader.style.opacity = '0'; setTimeout(() => loader.remove(), 300); }
 }
 
-// Back button (double tap to exit on login)
+// Back button handling (double tap to exit on login)
 let backPressedOnce = false;
 window.addEventListener('popstate', (e) => {
   const cur = document.querySelector('.page.active').id;
@@ -830,15 +841,15 @@ window.addEventListener('popstate', (e) => {
   }
 });
 history.pushState({}, '');
-    // ---------- Event listeners ----------
+      // ---------- Event listeners ----------
     document.addEventListener('DOMContentLoaded', function() {
       applyMarketTimesAndNotices();
       updateDateTime();
 
-      // REFRESH BUTTONS – actual page reload
-      document.getElementById('refresh-dash').addEventListener('click', () => location.reload());
-      document.getElementById('refresh-markets').addEventListener('click', () => location.reload());
-      document.getElementById('refresh-detail').addEventListener('click', () => location.reload());
+      // Refresh buttons (already have onclick reload, but we also bind specific ids if needed)
+      document.getElementById('refresh-dash-bottom')?.addEventListener('click', () => location.reload());
+      document.getElementById('refresh-markets-bottom')?.addEventListener('click', () => location.reload());
+      document.getElementById('refresh-detail-bottom')?.addEventListener('click', () => location.reload());
 
       // Login
       document.getElementById('login-btn').addEventListener('click', (e) => {
@@ -862,7 +873,7 @@ history.pushState({}, '');
       // Logout
       document.getElementById('logout').addEventListener('click', () => auth.signOut());
 
-      // Paid
+      // Paid button
       document.getElementById('paid-btn').addEventListener('click', async () => {
         const user = auth.currentUser;
         if (!user) return alert('Login required');
