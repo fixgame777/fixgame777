@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>GANESH · pro matka</title>
+  <title>GANESH · premium matka</title>
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Google Font: Outfit -->
@@ -296,6 +296,98 @@
       font-size: 0.8rem;
     }
 
+    /* Modal for market results */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .modal-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-content {
+      background: #0f1a2b;
+      border-radius: 2.5rem;
+      padding: 2rem;
+      max-width: 90%;
+      width: 400px;
+      border: 2px solid #38bdf8;
+      box-shadow: 0 30px 50px -20px black;
+    }
+    .modal-content h3 {
+      color: #fbbf24;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .result-item {
+      background: #1a2f48;
+      border: 1px solid #38bdf8;
+      border-radius: 1.5rem;
+      padding: 1rem;
+      text-align: center;
+    }
+    .result-item .label {
+      color: #94a3b8;
+      font-size: 0.8rem;
+      margin-bottom: 0.3rem;
+    }
+    .result-item .value {
+      color: #fbbf24;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .close-modal {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      background: #2d4055;
+      border: none;
+      border-radius: 3rem;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    /* Processing page */
+    .processing-container {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .spinner {
+      border: 4px solid rgba(255,255,255,0.1);
+      border-left-color: #38bdf8;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin: 1.5rem auto;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .fail-message {
+      background: #2f1c1c;
+      border: 1px solid #f87171;
+      border-radius: 2rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
     .nav-bar {
       display: flex;
       justify-content: space-between;
@@ -343,18 +435,6 @@
     }
     #toast.show { opacity: 1; }
 
-    .timer-message {
-      text-align: center;
-      background: #0f1a2b;
-      border: 1px solid #38bdf8;
-      border-radius: 3rem;
-      padding: 0.8rem;
-      margin: 1rem 0;
-      animation: pulseBlue 1.5s infinite;
-    }
-    @keyframes pulseBlue {
-      0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; }
-    }
     .error-message {
       color: #f87171;
       background: #2f1c1c;
@@ -419,7 +499,7 @@
   </div>
   <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
 </div>
-<!-- REGISTER PAGE (NEW) -->
+<!-- REGISTER PAGE -->
 <div id="register-page" class="page">
   <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
   <h2>CREATE ACCOUNT</h2>
@@ -465,8 +545,8 @@
     <a href="tel:+917353547650" class="helpline-link"><i class="fas fa-phone-alt"></i> Call</a>
   </div>
   <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
-  </div>
-  <!-- DASHBOARD PAGE (PRO) -->
+</div>
+<!-- DASHBOARD PAGE (single page with all markets) -->
 <div id="dashboard-page" class="page">
   <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
   <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -477,7 +557,7 @@
     </div>
   </div>
 
-  <!-- Welcome card with status -->
+  <!-- Welcome card -->
   <div class="welcome-card">
     <i class="fas fa-crown"></i>
     <div class="welcome-text">
@@ -491,6 +571,7 @@
     <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/e6d32229-8638-4d0d-8168-0ecf26c97511.jpg" alt="Dashboard 1">
   </div>
 
+  <!-- Market List (single) -->
   <div class="market-list">
     <div class="market-item" data-market="sridevi">Sridevi <span class="market-time">10:00 AM</span></div>
     <div class="market-item" data-market="timebazar">Time Bazar <span class="market-time">12:00 PM</span></div>
@@ -507,7 +588,7 @@
 
   <button class="btn btn-small" id="goto-subscription">SUBSCRIPTION</button>
 
-  <!-- Second image moved to bottom -->
+  <!-- Second image -->
   <div class="big-image">
     <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/a3bf0825-c851-401d-b7e6-4b2e27fb9fb9.jpg" alt="Dashboard 2">
   </div>
@@ -518,39 +599,16 @@
   </div>
 
   <div class="nav-bar">
-    <button class="nav-btn" id="goto-markets"><i class="fas fa-list"></i> MARKETS</button>
     <button class="nav-btn" id="goto-profile"><i class="fas fa-user"></i> PROFILE</button>
+    <button class="nav-btn" id="goto-info"><i class="fas fa-info-circle"></i> INFO</button>
   </div>
   <div class="nav-bar" style="margin-top:0.5rem;">
     <button class="nav-btn" id="refresh-dash-bottom"><i class="fas fa-sync-alt"></i> REFRESH</button>
     <button class="nav-btn" id="logout"><i class="fas fa-sign-out-alt"></i> LOGOUT</button>
   </div>
   <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
-</div>
-<!-- MARKETS PAGE -->
-<div id="markets-page" class="page">
-  <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
-  <h2>📊 MARKETS</h2>
-  <div class="market-list">
-    <div class="market-item" data-market="kalyan">KALYAN <span class="market-time">2:30 PM</span></div>
-    <div class="market-item" data-market="sridevi">SRIDEVI <span class="market-time">10:00 AM</span></div>
-    <div class="market-item" data-market="timebazar">TIME BAZAR <span class="market-time">12:00 PM</span></div>
-    <div class="market-item" data-market="milanday">MILAN DAY <span class="market-time">2:00 PM</span></div>
-    <div class="market-item" data-market="sridevinight">SRIDEVI NIGHT <span class="market-time">6:00 PM</span></div>
-    <div class="market-item" data-market="milannight">MILAN NIGHT <span class="market-time">8:00 PM</span></div>
-    <div class="market-item" data-market="mainbazar">MAIN BAZAR <span class="market-time">8:30 PM</span></div>
   </div>
-  <div class="notice" id="markets-notice"><strong style="color:#38bdf8;">📢 NOTICE BOARD</strong><br></div>
-  <div class="nav-bar">
-    <button class="nav-btn" id="back-to-dash"><i class="fas fa-arrow-left"></i> BACK</button>
-    <button class="nav-btn" id="refresh-markets-bottom"><i class="fas fa-sync-alt"></i> REFRESH</button>
-  </div>
-  <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
-</div>
-
-<!-- DETAIL PAGE (will be filled dynamically) -->
-<div id="detail-page" class="page" style="display: none;"></div>
-<!-- SUBSCRIPTION PAGE (PRO) -->
+  <!-- SUBSCRIPTION PAGE (Plan selection + QR) -->
 <div id="subscription-page" class="page">
   <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
   <div class="big-image">
@@ -582,10 +640,6 @@
     <p style="font-size:0.8rem;">Scan via PhonePe, GPay, Paytm, any UPI</p>
   </div>
 
-  <div id="timer-container" style="display: none;">
-    <div class="timer-message" id="timer-message"></div>
-  </div>
-
   <div class="helpline-card">
     <a href="https://wa.me/917353547650" target="_blank" class="helpline-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     <a href="tel:+917353547650" class="helpline-link"><i class="fas fa-phone-alt"></i> Call</a>
@@ -600,6 +654,34 @@
     <img id="sub-bottom-img" src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/c33ecce6-da20-4047-a0ce-df100fbd6657.png" alt="Bottom">
   </div>
   <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
+    </div>
+    <!-- PROCESSING PAGE (after payment) -->
+<div id="processing-page" class="page">
+  <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
+  <h2>PROCESSING</h2>
+  <div class="processing-container">
+    <div class="spinner"></div>
+    <p style="color:#94a3b8; margin:1rem 0;">Waiting for payment confirmation...</p>
+    <div id="processing-timer" class="timer-message" style="margin:1rem 0;"></div>
+    <div id="processing-fail" style="display: none;" class="fail-message">
+      <i class="fas fa-times-circle" style="color:#f87171;"></i> Transaction incomplete. Please try again or contact support.
+    </div>
+  </div>
+  <div class="nav-bar" style="justify-content:center;">
+    <button class="nav-btn" id="cancel-processing"><i class="fas fa-arrow-left"></i> BACK TO SUBSCRIPTION</button>
+  </div>
+  <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
+</div>
+
+<!-- Market Result Modal (hidden by default) -->
+<div id="market-modal" class="modal-overlay">
+  <div class="modal-content">
+    <h3 id="modal-market-title">KALYAN</h3>
+    <div class="result-grid" id="modal-result-grid">
+      <!-- filled dynamically -->
+    </div>
+    <button class="close-modal" id="close-modal-btn">CLOSE</button>
+  </div>
 </div>
   <!-- PROFILE PAGE -->
   <div id="profile-page" class="page">
@@ -674,37 +756,21 @@
       document.getElementById(pageId).classList.add('active');
     }
 
-    function loadMarketDetail(marketKey) {
+    // Show market results in modal
+    function showMarketModal(marketKey) {
       const market = config.markets[marketKey];
       if (!market) return;
-      let detailPage = document.getElementById('detail-page');
-      if (!detailPage) {
-        detailPage = document.createElement('div');
-        detailPage.id = 'detail-page';
-        detailPage.className = 'page';
-        detailPage.innerHTML = `
-          <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
-          <h2 id="detail-title">KALYAN</h2>
-          <div class="detail-grid" id="detail-grid"></div>
-          <div class="nav-bar">
-            <button class="nav-btn" id="back-to-markets"><i class="fas fa-arrow-left"></i> BACK</button>
-            <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button>
-          </div>
-          <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
-        `;
-        document.getElementById('app').appendChild(detailPage);
-        document.getElementById('back-to-markets').addEventListener('click', () => showPage('markets-page'));
-      }
-      document.getElementById('detail-title').innerText = market.name;
-      const grid = document.getElementById('detail-grid');
+      document.getElementById('modal-market-title').innerText = market.name;
+      const grid = document.getElementById('modal-result-grid');
       grid.innerHTML = '';
-      ['otc','support','jodi','pannel'].forEach(key => {
-        const card = document.createElement('div');
-        card.className = 'detail-card';
-        card.innerHTML = `<h4>${market.labels[key]}</h4><div class="detail-numbers">${market.numbers[key]}</div>`;
-        grid.appendChild(card);
+      const items = ['otc', 'support', 'jodi', 'pannel'];
+      items.forEach(key => {
+        const div = document.createElement('div');
+        div.className = 'result-item';
+        div.innerHTML = `<div class="label">${market.labels[key]}</div><div class="value">${market.numbers[key]}</div>`;
+        grid.appendChild(div);
       });
-      showPage('detail-page');
+      document.getElementById('market-modal').classList.add('show');
     }
 
     function updateDateTime() {
@@ -746,43 +812,50 @@
       }
     }
 
-    // Timer variables
-    let timerInterval = null, timerEndTime = null;
-    const TIMER_DURATION = 10 * 60 * 1000;
+    // Payment processing
+    let processingInterval = null;
+    let processingEndTime = null;
+    const PROCESSING_TIMEOUT = 10 * 60 * 1000; // 10 minutes
 
-    function startTimer() {
-      const timerContainer = document.getElementById('timer-container');
-      const timerMessage = document.getElementById('timer-message');
-      if (!timerContainer || !timerMessage) return;
-      if (timerInterval) clearInterval(timerInterval);
-      timerEndTime = Date.now() + TIMER_DURATION;
-      timerContainer.style.display = 'block';
-      document.getElementById('paid-btn').disabled = true;
+    function startProcessing(plan) {
+      const user = auth.currentUser;
+      if (!user) return;
 
-      timerInterval = setInterval(async () => {
-        const remaining = timerEndTime - Date.now();
+      // Store plan in session for later use
+      sessionStorage.setItem('selectedPlan', plan);
+
+      showPage('processing-page');
+      const timerEl = document.getElementById('processing-timer');
+      const failEl = document.getElementById('processing-fail');
+      failEl.style.display = 'none';
+      processingEndTime = Date.now() + PROCESSING_TIMEOUT;
+
+      if (processingInterval) clearInterval(processingInterval);
+      processingInterval = setInterval(async () => {
+        const remaining = processingEndTime - Date.now();
         if (remaining <= 0) {
-          clearInterval(timerInterval); timerInterval = null;
-          timerContainer.style.display = 'none';
-          document.getElementById('paid-btn').disabled = false;
-          alert('Payment verification timeout. Try again.');
+          clearInterval(processingInterval);
+          processingInterval = null;
+          failEl.style.display = 'block';
+          timerEl.innerText = '';
           return;
         }
-        const mins = Math.floor(remaining/60000);
-        const secs = Math.floor((remaining%60000)/1000);
-        timerMessage.innerText = `⏳ Verifying... ${mins}:${secs<10?'0':''}${secs}`;
+        const mins = Math.floor(remaining / 60000);
+        const secs = Math.floor((remaining % 60000) / 1000);
+        timerEl.innerText = `⏳ Time left: ${mins}:${secs < 10 ? '0' : ''}${secs}`;
+
+        // Check subscription status
         const user = auth.currentUser;
         if (user) {
           const doc = await db.collection('users').doc(user.uid).get();
-          if (doc.exists && doc.data().subscriptionActive) {
-            clearInterval(timerInterval); timerInterval = null;
-            timerContainer.style.display = 'none';
-            document.getElementById('paid-btn').disabled = false;
-            alert('Payment verified!');
+          if (doc.exists && doc.data().subscriptionActive === true) {
+            clearInterval(processingInterval);
+            processingInterval = null;
+            alert('Payment verified! Redirecting to dashboard.');
             showPage('dashboard-page');
           }
         }
-      }, 5000);
+      }, 3000);
     }
 
     // Toast for reload
@@ -807,7 +880,7 @@
       if (loader) { loader.style.opacity = '0'; setTimeout(() => loader.remove(), 300); }
     }
 
-    // Back button handling (double tap to exit on login)
+    // Back button handling
     let backPressedOnce = false;
     window.addEventListener('popstate', (e) => {
       const cur = document.querySelector('.page.active').id;
@@ -816,13 +889,15 @@
         else { backPressedOnce = true; alert('Press back again to exit'); setTimeout(() => backPressedOnce = false, 2000); history.pushState({},''); }
       } else if (cur === 'register-page') {
         showPage('login-page');
-      } else if (cur === 'markets-page') showPage('dashboard-page');
-      else if (cur === 'detail-page') showPage('markets-page');
-      else if (cur === 'subscription-page') {
-        if (timerInterval) { clearInterval(timerInterval); timerInterval = null; document.getElementById('timer-container').style.display = 'none'; document.getElementById('paid-btn').disabled = false; }
+      } else if (cur === 'processing-page') {
+        if (processingInterval) clearInterval(processingInterval);
+        processingInterval = null;
+        showPage('subscription-page');
+      } else if (cur === 'profile-page' || cur === 'info-page') {
         showPage('dashboard-page');
-      } else if (cur === 'profile-page' || cur === 'info-page') showPage('dashboard-page');
-      else window.history.back();
+      } else {
+        window.history.back();
+      }
     });
     history.pushState({}, '');
 
@@ -833,7 +908,6 @@
 
       // Refresh buttons
       document.getElementById('refresh-dash-bottom')?.addEventListener('click', () => location.reload());
-      document.getElementById('refresh-markets-bottom')?.addEventListener('click', () => location.reload());
 
       // Login
       document.getElementById('login-btn').addEventListener('click', (e) => {
@@ -873,9 +947,7 @@
         }
         try {
           const cred = await auth.createUserWithEmailAndPassword(mobile+'@matka.com', pw);
-          // Update profile with name
           await cred.user.updateProfile({ displayName: name });
-          // User document will be created by ensureUserDocument on first auth
           err.style.display = 'none';
           alert('Account created! Please wait for admin to activate subscription.');
         } catch (error) {
@@ -888,7 +960,7 @@
       // Logout
       document.getElementById('logout').addEventListener('click', () => auth.signOut());
 
-      // Paid button
+      // Paid button – open WhatsApp and start processing
       document.getElementById('paid-btn').addEventListener('click', async () => {
         const user = auth.currentUser;
         if (!user) { alert('Login required'); return; }
@@ -905,9 +977,15 @@
           const mobile = data.mobile || user.email?.split('@')[0] || '';
           const msg = `PAYMENT REQUEST%0AMobile: ${mobile}%0APlan: ${plan}%0AUID: ${user.uid}`;
           window.open(`https://wa.me/${config.adminWhatsApp.replace(/\D/g,'')}?text=${msg}`, '_blank');
-          startTimer();
-          alert('WhatsApp opened. Send screenshot.');
+          startProcessing(plan);
         } catch (er) { alert('Error: ' + er.message); }
+      });
+
+      // Cancel processing
+      document.getElementById('cancel-processing').addEventListener('click', () => {
+        if (processingInterval) clearInterval(processingInterval);
+        processingInterval = null;
+        showPage('subscription-page');
       });
 
       // Plan selection
@@ -922,32 +1000,38 @@
 
       // Navigation
       document.getElementById('goto-subscription')?.addEventListener('click', () => showPage('subscription-page'));
-      document.getElementById('goto-markets')?.addEventListener('click', () => showPage('markets-page'));
       document.getElementById('goto-profile')?.addEventListener('click', () => showPage('profile-page'));
-      document.getElementById('back-from-sub')?.addEventListener('click', () => {
-        if (timerInterval) { clearInterval(timerInterval); timerInterval = null; document.getElementById('timer-container').style.display = 'none'; document.getElementById('paid-btn').disabled = false; }
-        showPage('dashboard-page');
-      });
+      document.getElementById('goto-info')?.addEventListener('click', () => showPage('info-page'));
+      document.getElementById('back-from-sub')?.addEventListener('click', () => showPage('dashboard-page'));
       document.getElementById('back-from-profile')?.addEventListener('click', () => showPage('dashboard-page'));
       document.getElementById('back-from-info')?.addEventListener('click', () => showPage('dashboard-page'));
-      document.getElementById('back-to-dash')?.addEventListener('click', () => showPage('dashboard-page'));
 
-      // Market clicks
+      // Close modal
+      document.getElementById('close-modal-btn').addEventListener('click', () => {
+        document.getElementById('market-modal').classList.remove('show');
+      });
+
+      // Market item clicks – open modal if subscribed
       document.querySelectorAll('.market-item').forEach(el => {
         el.addEventListener('click', async (e) => {
           const key = e.currentTarget.getAttribute('data-market');
           if (!key) return;
           const user = auth.currentUser;
           if (!user) { showPage('login-page'); return; }
+
           try {
             const data = await ensureUserDocument(user);
-            if (data.subscriptionActive) {
-              loadMarketDetail(key);
+            if (data.subscriptionActive === true) {
+              showMarketModal(key);
             } else {
-              alert('Subscription not active. Contact admin.');
+              alert('Subscription not active. Please contact admin.');
               showPage('subscription-page');
             }
-          } catch { showPage('subscription-page'); }
+          } catch (err) {
+            console.error(err);
+            alert('Error checking subscription.');
+            showPage('subscription-page');
+          }
         });
       });
 
@@ -955,10 +1039,8 @@
       let authInit = false;
       auth.onAuthStateChanged(async user => {
         if (!authInit) authInit = true;
-        if (!user && timerInterval) {
-          clearInterval(timerInterval); timerInterval = null;
-          document.getElementById('timer-container').style.display = 'none';
-          document.getElementById('paid-btn').disabled = false;
+        if (!user && processingInterval) {
+          clearInterval(processingInterval); processingInterval = null;
         }
         if (user) {
           try {
@@ -976,7 +1058,14 @@
               const d = data.createdAt.toDate ? data.createdAt.toDate() : new Date();
               document.getElementById('profile-join').innerText = d.toLocaleDateString();
             }
-            showPage(data.subscriptionActive ? 'dashboard-page' : 'subscription-page');
+            // If we're on processing page and subscription became active, redirect
+            if (document.getElementById('processing-page').classList.contains('active') && data.subscriptionActive) {
+              clearInterval(processingInterval);
+              processingInterval = null;
+              showPage('dashboard-page');
+            } else {
+              showPage(data.subscriptionActive ? 'dashboard-page' : 'subscription-page');
+            }
           } catch { showPage('subscription-page'); }
         } else showPage('login-page');
         if (authInit) hideLoading();
