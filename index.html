@@ -721,22 +721,30 @@
     <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
   </div>
 </div> <!-- end #app -->
-    <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 
-  <!-- Load market data with automatic cache‑busting (no manual version needed) -->
-  <script>
-    (function() {
-      var script = document.createElement('script');
-      script.src = 'market-data.js?v=' + Date.now(); // unique timestamp
-      document.head.appendChild(script);
-    })();
-  </script>
+<!-- Load market data with cache‑busting, then start the app -->
+<script>
+  (function() {
+    var script = document.createElement('script');
+    script.src = 'market-data.js?v=' + Date.now();
+    script.onload = function() {
+      console.log('✅ market-data.js loaded, starting app...');
+      initApp(); // start the main application
+    };
+    script.onerror = function() {
+      console.error('❌ Failed to load market-data.js');
+      alert('Critical error: market data file missing. Please refresh.');
+    };
+    document.head.appendChild(script);
+  })();
 
-  <script>
-    // 🔥 YOUR FIREBASE CONFIG (replace with your new project)
+  // Main application – runs after market-data.js is loaded
+  function initApp() {
+    // 🔥 YOUR FIREBASE CONFIG (replace if needed)
     const firebaseConfig = {
       apiKey: "AIzaSyC7mxOFOYebaxV8dAwpfP7a_Ayq7TAIbds",
       authDomain: "fixgame-fa24c.firebaseapp.com",
@@ -746,14 +754,17 @@
       appId: "1:242917437907:web:ee29a01f9290cf6b6c7f26",
       measurementId: "G-ZFB6GN6PX7"
     };
+
+    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
     const db = firebase.firestore();
 
-    // `marketConfig` is now globally available from the dynamically loaded script
+    // marketConfig is now available from the loaded script
     const config = marketConfig;
+    console.log('Market config loaded:', config);
 
-    // ---------- Helper Functions ----------
+    // ---------- Helper Functions (same as before) ----------
     function showPage(pageId) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById(pageId).classList.add('active');
@@ -821,9 +832,7 @@
     function startProcessing(plan) {
       const user = auth.currentUser;
       if (!user) return;
-
       sessionStorage.setItem('selectedPlan', plan);
-
       showPage('processing-page');
       const timerEl = document.getElementById('processing-timer');
       const failEl = document.getElementById('processing-fail');
@@ -865,6 +874,7 @@
     window.addEventListener('pageshow', showReloadToast);
     showReloadToast();
 
+    // Loading screen removal
     if (!document.getElementById('loading-screen')) {
       const ld = document.createElement('div');
       ld.id = 'loading-screen';
@@ -877,6 +887,7 @@
       if (loader) { loader.style.opacity = '0'; setTimeout(() => loader.remove(), 300); }
     }
 
+    // Back button handling
     let backPressedOnce = false;
     window.addEventListener('popstate', (e) => {
       const cur = document.querySelector('.page.active').id;
@@ -897,7 +908,7 @@
     });
     history.pushState({}, '');
 
-    // ---------- Event Listeners ----------
+    // ---------- Event Listeners (now safe to run) ----------
     document.addEventListener('DOMContentLoaded', function() {
       applyMarketTimesAndNotices();
       updateDateTime();
@@ -919,10 +930,13 @@
           });
       });
 
+      // Go to register page
       document.getElementById('goto-register-btn').addEventListener('click', () => showPage('register-page'));
+
+      // Back to login from register
       document.getElementById('back-to-login-btn').addEventListener('click', () => showPage('login-page'));
 
-      // Register
+      // Register new user
       document.getElementById('register-btn').addEventListener('click', async (e) => {
         e.preventDefault();
         const name = document.getElementById('reg-name').value.trim();
@@ -949,6 +963,7 @@
         }
       });
 
+      // Logout
       document.getElementById('logout').addEventListener('click', () => auth.signOut());
 
       // Paid button
@@ -972,6 +987,7 @@
         } catch (er) { alert('Error: ' + er.message); }
       });
 
+      // Cancel processing
       document.getElementById('cancel-processing').addEventListener('click', () => {
         if (processingInterval) clearInterval(processingInterval);
         processingInterval = null;
@@ -1055,7 +1071,6 @@
         if (authInit) hideLoading();
       });
       setTimeout(hideLoading, 3000);
-    });
+    }); // end DOMContentLoaded
+  } // end initApp
   </script>
-</body>
-</html>
