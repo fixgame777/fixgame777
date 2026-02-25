@@ -490,8 +490,8 @@
     <strong style="color:#38bdf8;">-DISCLAIMER:-</strong> Visiting this site and browsing it is strictly recommended at your own risk. Every information available here is only according to informational purpose and based on astrology and number calculations. We are no associated or affiliated with any illegal Matka business. We make sure we follow all rules and regulations of the regions where you are accessing the website. There are also chances that the website may be banned in your area and after that if you are using it, you are solely dependable and responsible for any damage, loss or legal action taken. If you are the one who does not like our disclaimer it is advised that you leave our website immediately. Copying of any information/contents posted on the website is strictly prohibited and against the law.
   </div>
   <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
-        </div>
-        <!-- REGISTER PAGE -->
+</div>
+<!-- REGISTER PAGE -->
 <div id="register-page" class="page">
   <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
   <h2>CREATE ACCOUNT</h2>
@@ -644,76 +644,36 @@
   </div>
   <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
 </div>
-  <!-- PROCESSING PAGE -->
-  <div id="processing-page" class="page">
-    <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
-    <h2>PROCESSING</h2>
-    <div class="processing-container">
-      <div class="spinner"></div>
-      <p style="color:#94a3b8; margin:1rem 0;">Waiting for payment confirmation...</p>
-      <div id="processing-timer" class="timer-message" style="margin:1rem 0;"></div>
-      <div id="processing-fail" style="display: none;" class="fail-message">
-        <i class="fas fa-times-circle" style="color:#f87171;"></i> Transaction incomplete. Please try again or contact support.
-      </div>
+<!-- PROCESSING PAGE (no navigation, only spinner and timer) -->
+<div id="processing-page" class="page">
+  <div class="extra-refresh" style="justify-content:center;">
+    <!-- Refresh button intentionally removed – user should not refresh manually, but if they do, we handle it -->
+  </div>
+  <h2>PROCESSING</h2>
+  <div class="processing-container">
+    <div class="spinner"></div>
+    <p style="color:#94a3b8; margin:1rem 0;">Waiting for payment confirmation...</p>
+    <div id="processing-timer" class="timer-message" style="margin:1rem 0;"></div>
+    <div id="processing-fail" style="display: none;" class="fail-message">
+      <i class="fas fa-times-circle" style="color:#f87171;"></i> Transaction incomplete. Please try again or contact support.
     </div>
-    <div class="nav-bar" style="justify-content:center;">
+    <!-- Back button appears only after timeout -->
+    <div id="processing-back-btn" style="display: none; margin-top:1rem;">
       <button class="nav-btn" id="cancel-processing"><i class="fas fa-arrow-left"></i> BACK TO SUBSCRIPTION</button>
     </div>
-    <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
   </div>
+  <!-- No other buttons – user is stuck until timeout or activation -->
+</div>
 
-  <!-- MARKET MODAL -->
-  <div id="market-modal" class="modal-overlay">
-    <div class="modal-content">
-      <h3 id="modal-market-title">KALYAN</h3>
-      <div class="result-grid" id="modal-result-grid"></div>
-      <button class="close-modal" id="close-modal-btn">CLOSE</button>
-    </div>
+<!-- MARKET MODAL (unchanged) -->
+<div id="market-modal" class="modal-overlay">
+  <div class="modal-content">
+    <h3 id="modal-market-title">KALYAN</h3>
+    <div class="result-grid" id="modal-result-grid"></div>
+    <button class="close-modal" id="close-modal-btn">CLOSE</button>
   </div>
-
-  <!-- PROFILE PAGE -->
-  <div id="profile-page" class="page">
-    <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
-    <h2>PROFILE</h2>
-    <div style="background:#0f1a2b; border-radius:2rem; padding:1.5rem; border:1px solid #38bdf8; text-align:center;">
-      <i class="fas fa-user-circle" style="font-size:4rem; color:#38bdf8; margin-bottom:1rem;"></i>
-      <div id="profile-name" style="font-size:1.3rem; font-weight:600;">-</div>
-      <div id="profile-mobile" style="color:#94a3b8; margin:0.5rem 0;">-</div>
-      <div id="profile-status" style="background:#1e3349; border-radius:2rem; padding:0.4rem; display:inline-block;">Subscription: <span id="sub-status">Inactive</span></div>
-    </div>
-    <div style="margin:1.5rem 0;">
-      <div style="display:flex; align-items:center; gap:1rem; padding:1rem; background:rgba(0,0,0,0.2); border-radius:2rem; border:1px solid #2d4055;">
-        <i class="fas fa-calendar-alt" style="color:#38bdf8;"></i> Joined: <span id="profile-join">-</span>
       </div>
-    </div>
-    <div class="nav-bar">
-      <button class="nav-btn" id="back-from-profile"><i class="fas fa-arrow-left"></i> BACK</button>
-      <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button>
-    </div>
-    <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
-  </div>
-
-  <!-- INFO PAGE -->
-  <div id="info-page" class="page">
-    <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
-    <h2>INFO</h2>
-    <div style="display:flex; flex-direction:column; gap:1rem;">
-      <div class="helpline-link" style="justify-content:center;"><i class="fas fa-phone-alt"></i> +91 7353547650</div>
-      <div class="helpline-link" style="justify-content:center;"><i class="fab fa-whatsapp"></i> +91 7353547650</div>
-      <div class="helpline-link" style="justify-content:center;"><i class="fab fa-telegram"></i> <a href="tg://resolve?domain=rudrakshankg" style="color:#e2e8f0; text-decoration:none;">@rudrakshankg</a> (App) | <a href="https://t.me/rudrakshankg" style="color:#e2e8f0;">Web</a></div>
-    </div>
-    <div class="notice" style="margin-top:1.5rem;">
-      <strong style="color:#38bdf8;">📢 ABOUT</strong><br>
-      FIX GAME 777 is a premium matka guessing platform. All results are based on astrological calculations. We are not affiliated with any illegal business.
-    </div>
-    <div class="nav-bar">
-      <button class="nav-btn" id="back-from-info"><i class="fas fa-arrow-left"></i> BACK</button>
-      <button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button>
-    </div>
-    <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
-  </div>
-</div> <!-- end #app -->
-    <!-- Firebase SDKs -->
+        <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
@@ -788,7 +748,7 @@
 
     const config = marketConfig; // use the embedded config
 
-    // ---------- Helper Functions (same as before) ----------
+    // ---------- Helper Functions ----------
     function showPage(pageId) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById(pageId).classList.add('active');
@@ -849,19 +809,47 @@
       }
     }
 
+    // ---------- Processing Timer ----------
     let processingInterval = null;
     let processingEndTime = null;
-    const PROCESSING_TIMEOUT = 10 * 60 * 1000;
+    const PROCESSING_TIMEOUT = 10 * 60 * 1000; // 10 minutes
 
     function startProcessing(plan) {
       const user = auth.currentUser;
       if (!user) return;
-      sessionStorage.setItem('selectedPlan', plan);
+
+      // Store end time in sessionStorage to survive refresh
+      const endTime = Date.now() + PROCESSING_TIMEOUT;
+      sessionStorage.setItem('processingEndTime', endTime);
+      sessionStorage.setItem('processingPlan', plan);
+
+      showProcessingPage();
+    }
+
+    function showProcessingPage() {
       showPage('processing-page');
       const timerEl = document.getElementById('processing-timer');
       const failEl = document.getElementById('processing-fail');
+      const backBtn = document.getElementById('processing-back-btn');
       failEl.style.display = 'none';
-      processingEndTime = Date.now() + PROCESSING_TIMEOUT;
+      backBtn.style.display = 'none';
+
+      // Retrieve end time from sessionStorage
+      const storedEnd = sessionStorage.getItem('processingEndTime');
+      if (!storedEnd) {
+        // No active processing, go back to subscription
+        showPage('subscription-page');
+        return;
+      }
+      processingEndTime = parseInt(storedEnd, 10);
+      const now = Date.now();
+      if (processingEndTime <= now) {
+        // Timer already expired
+        failEl.style.display = 'block';
+        backBtn.style.display = 'block';
+        timerEl.innerText = '';
+        return;
+      }
 
       if (processingInterval) clearInterval(processingInterval);
       processingInterval = setInterval(async () => {
@@ -870,19 +858,26 @@
           clearInterval(processingInterval);
           processingInterval = null;
           failEl.style.display = 'block';
+          backBtn.style.display = 'block';
           timerEl.innerText = '';
+          sessionStorage.removeItem('processingEndTime');
+          sessionStorage.removeItem('processingPlan');
           return;
         }
         const mins = Math.floor(remaining / 60000);
         const secs = Math.floor((remaining % 60000) / 1000);
         timerEl.innerText = `⏳ Time left: ${mins}:${secs < 10 ? '0' : ''}${secs}`;
 
+        // Check subscription status
         const user = auth.currentUser;
         if (user) {
           const doc = await db.collection('users').doc(user.uid).get();
           if (doc.exists && doc.data().subscriptionActive === true) {
+            // Payment verified!
             clearInterval(processingInterval);
             processingInterval = null;
+            sessionStorage.removeItem('processingEndTime');
+            sessionStorage.removeItem('processingPlan');
             alert('Payment verified! Redirecting to dashboard.');
             showPage('dashboard-page');
           }
@@ -890,6 +885,7 @@
       }, 3000);
     }
 
+    // ---------- Toast and Loading ----------
     function showReloadToast() {
       const toast = document.getElementById('toast');
       toast.classList.add('show');
@@ -910,6 +906,7 @@
       if (loader) { loader.style.opacity = '0'; setTimeout(() => loader.remove(), 300); }
     }
 
+    // ---------- Back Button Handling ----------
     let backPressedOnce = false;
     window.addEventListener('popstate', (e) => {
       const cur = document.querySelector('.page.active').id;
@@ -919,9 +916,8 @@
       } else if (cur === 'register-page') {
         showPage('login-page');
       } else if (cur === 'processing-page') {
-        if (processingInterval) clearInterval(processingInterval);
-        processingInterval = null;
-        showPage('subscription-page');
+        // Do nothing – stay on processing page
+        history.pushState({}, ''); // prevent back
       } else if (cur === 'profile-page' || cur === 'info-page') {
         showPage('dashboard-page');
       } else {
@@ -935,8 +931,14 @@
       applyMarketTimesAndNotices();
       updateDateTime();
 
+      // Check if we were in processing on previous load
+      if (sessionStorage.getItem('processingEndTime')) {
+        showProcessingPage();
+      }
+
       document.getElementById('refresh-dash-bottom')?.addEventListener('click', () => location.reload());
 
+      // Login
       document.getElementById('login-btn').addEventListener('click', (e) => {
         e.preventDefault();
         const mobile = document.getElementById('login-mobile').value.trim();
@@ -954,6 +956,7 @@
       document.getElementById('goto-register-btn').addEventListener('click', () => showPage('register-page'));
       document.getElementById('back-to-login-btn').addEventListener('click', () => showPage('login-page'));
 
+      // Register
       document.getElementById('register-btn').addEventListener('click', async (e) => {
         e.preventDefault();
         const name = document.getElementById('reg-name').value.trim();
@@ -980,8 +983,10 @@
         }
       });
 
+      // Logout
       document.getElementById('logout').addEventListener('click', () => auth.signOut());
 
+      // Paid button – start processing
       document.getElementById('paid-btn').addEventListener('click', async () => {
         const user = auth.currentUser;
         if (!user) { alert('Login required'); return; }
@@ -1002,12 +1007,16 @@
         } catch (er) { alert('Error: ' + er.message); }
       });
 
+      // Cancel processing (only shown after timeout)
       document.getElementById('cancel-processing').addEventListener('click', () => {
         if (processingInterval) clearInterval(processingInterval);
         processingInterval = null;
+        sessionStorage.removeItem('processingEndTime');
+        sessionStorage.removeItem('processingPlan');
         showPage('subscription-page');
       });
 
+      // Plan selection
       document.getElementById('plan-1day').addEventListener('click', function() {
         document.querySelectorAll('.plan-card').forEach(p => p.classList.remove('selected'));
         this.classList.add('selected');
@@ -1017,6 +1026,7 @@
         this.classList.add('selected');
       });
 
+      // Navigation
       document.getElementById('goto-subscription')?.addEventListener('click', () => showPage('subscription-page'));
       document.getElementById('goto-profile')?.addEventListener('click', () => showPage('profile-page'));
       document.getElementById('goto-info')?.addEventListener('click', () => showPage('info-page'));
@@ -1024,10 +1034,12 @@
       document.getElementById('back-from-profile')?.addEventListener('click', () => showPage('dashboard-page'));
       document.getElementById('back-from-info')?.addEventListener('click', () => showPage('dashboard-page'));
 
+      // Close modal
       document.getElementById('close-modal-btn').addEventListener('click', () => {
         document.getElementById('market-modal').classList.remove('show');
       });
 
+      // Market item clicks – if not subscribed, go to subscription page
       document.querySelectorAll('.market-item').forEach(el => {
         el.addEventListener('click', async (e) => {
           const key = e.currentTarget.getAttribute('data-market');
@@ -1040,7 +1052,8 @@
             if (data.subscriptionActive === true) {
               showMarketModal(key);
             } else {
-              alert('Subscription not active. Please contact admin.');
+              // Redirect to subscription page
+              showPage('subscription-page');
             }
           } catch (err) {
             console.error(err);
@@ -1049,11 +1062,14 @@
         });
       });
 
+      // Auth observer
       let authInit = false;
       auth.onAuthStateChanged(async user => {
         if (!authInit) authInit = true;
         if (!user && processingInterval) {
           clearInterval(processingInterval); processingInterval = null;
+          sessionStorage.removeItem('processingEndTime');
+          sessionStorage.removeItem('processingPlan');
         }
         if (user) {
           try {
@@ -1069,15 +1085,25 @@
               const d = data.createdAt.toDate ? data.createdAt.toDate() : new Date();
               document.getElementById('profile-join').innerText = d.toLocaleDateString();
             }
+            // If we're on processing page and subscription became active, redirect
             if (document.getElementById('processing-page').classList.contains('active') && data.subscriptionActive) {
               clearInterval(processingInterval);
               processingInterval = null;
+              sessionStorage.removeItem('processingEndTime');
+              sessionStorage.removeItem('processingPlan');
               showPage('dashboard-page');
-            } else {
+            } else if (!document.getElementById('processing-page').classList.contains('active')) {
+              // Only auto-redirect to dashboard if not on processing page
               showPage('dashboard-page');
             }
-          } catch { showPage('dashboard-page'); }
-        } else showPage('login-page');
+          } catch { 
+            if (!document.getElementById('processing-page').classList.contains('active')) {
+              showPage('dashboard-page'); 
+            }
+          }
+        } else {
+          showPage('login-page');
+        }
         if (authInit) hideLoading();
       });
       setTimeout(hideLoading, 3000);
