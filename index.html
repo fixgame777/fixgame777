@@ -358,7 +358,7 @@
   font-weight: 600;
   cursor: pointer;
   margin-top: 1rem;
-    }
+}
         .processing-container {
       text-align: center;
       padding: 2rem 1rem;
@@ -487,11 +487,11 @@
   </div>
 
   <div class="disclaimer">
-    <strong style="color:#38bdf8;">-DISCLAIMER:-</strong> Visiting this site and browsing it is strictly recommended at your own risk. Every information available here is only according to informational purpose and based on astrology and number calculations. We are no associated or affiliated with any illegal Matka business. We make sure we follow all rules and regulations of the regions where you are accessing the website. There are also chances that the website may be banned in your area and after that if you are using it, you are solely dependable and responsible for any damage, loss or legal action taken. If you are the one who does not like our disclaimer it is advised that you leave our website immediately. Copying of any information/contents posted on the website is strictly prohibited and against the law.
+    <strong style="color:#38bdf8;">-DISCLAIMER:-</strong> Visiting this site and browsing it is strictly recommended at your own risk...
   </div>
   <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
-</div>
-<!-- REGISTER PAGE -->
+                           </div>
+                           <!-- REGISTER PAGE -->
 <div id="register-page" class="page">
   <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
   <h2>CREATE ACCOUNT</h2>
@@ -538,7 +538,6 @@
   </div>
   <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
 </div>
-
 <!-- DASHBOARD PAGE -->
 <div id="dashboard-page" class="page">
   <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
@@ -558,14 +557,12 @@
     </div>
   </div>
 
+  <!-- First image -->
   <div class="big-image">
-    <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/e6d32229-8638-4d0d-8168-0ecf26c97511.jpg" alt="Dashboard 1">
-      </div>
-      <div class="big-image">
     <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/e6d32229-8638-4d0d-8168-0ecf26c97511.jpg" alt="Dashboard 1">
   </div>
 
-  <!-- SUBSCRIPTION BUTTON moved here (between first image and market list) -->
+  <!-- SUBSCRIPTION BUTTON moved between first image and market list -->
   <button class="btn btn-small" id="goto-subscription">SUBSCRIPTION</button>
 
   <div class="market-list">
@@ -582,7 +579,7 @@
     <strong style="color:#38bdf8;">📢 NOTICE BOARD</strong><br>
   </div>
 
-  <!-- second image stays here -->
+  <!-- second image -->
   <div class="big-image">
     <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/a3bf0825-c851-401d-b7e6-4b2e27fb9fb9.jpg" alt="Dashboard 2">
   </div>
@@ -602,11 +599,57 @@
   </div>
   <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
 </div>
-  <!-- PROCESSING PAGE (no navigation, only spinner and timer) -->
-  <div id="processing-page" class="page">
-    <div class="extra-refresh" style="justify-content:center;">
-      <!-- Refresh button intentionally removed – user should not refresh manually, but if they do, we handle it -->
+  <!-- SUBSCRIPTION PAGE -->
+  <div id="subscription-page" class="page">
+    <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
+    <div class="big-image">
+      <img id="sub-top-img" src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/f94bbdd7-fa3c-4791-a387-18bd057b2868.jpg" alt="Top">
     </div>
+
+    <h2>MEMBERSHIP</h2>
+
+    <div class="plan-container">
+      <div class="plan-card" id="plan-1day">
+        <div>1 DAY</div>
+        <div class="price">₹1100</div>
+        <div class="features">✓ Full access<br>✓ 1 day validity</div>
+      </div>
+      <div class="plan-card" id="plan-1week">
+        <div>1 WEEK</div>
+        <div class="price">₹5100</div>
+        <div class="features">✓ Full access<br>✓ 7 days validity<br>✓ Priority support</div>
+      </div>
+    </div>
+
+    <div class="qr-section">
+      <p style="color:#94a3b8;">Select plan & scan QR to pay</p>
+      <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/0e62c615-2776-42a3-99b4-252c5fb435c1.png" alt="QR" class="qr-image">
+      <div class="upi-info">
+        <i class="fas fa-qrcode"></i> UPI ID: mayursinh.72rathod72@okhdfcbank
+      </div>
+      <p style="font-size:0.8rem;">Scan via PhonePe, GPay, Paytm, any UPI</p>
+      <p style="color:#fbbf24; font-size:0.9rem; margin-top:0.5rem;">After payment done, send screenshot on WhatsApp or Telegram</p>
+    </div>
+
+    <div class="helpline-card">
+      <a href="https://wa.me/917353547650" target="_blank" class="helpline-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="tel:+917353547650" class="helpline-link"><i class="fas fa-phone-alt"></i> Call</a>
+    </div>
+
+    <div class="nav-bar">
+      <button class="nav-btn" id="back-from-sub"><i class="fas fa-arrow-left"></i> BACK</button>
+      <button class="nav-btn" id="paid-btn">I HAVE PAID</button>
+    </div>
+
+    <div class="big-image">
+      <img id="sub-bottom-img" src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/c33ecce6-da20-4047-a0ce-df100fbd6657.png" alt="Bottom">
+    </div>
+    <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
+  </div>
+
+  <!-- PROCESSING PAGE -->
+  <div id="processing-page" class="page">
+    <div class="extra-refresh" style="justify-content:center;"></div>
     <h2>PROCESSING</h2>
     <div class="processing-container">
       <div class="spinner"></div>
@@ -615,15 +658,13 @@
       <div id="processing-fail" style="display: none;" class="fail-message">
         <i class="fas fa-times-circle" style="color:#f87171;"></i> Transaction incomplete. Please try again or contact support.
       </div>
-      <!-- Back button appears only after timeout -->
       <div id="processing-back-btn" style="display: none; margin-top:1rem;">
         <button class="nav-btn" id="cancel-processing"><i class="fas fa-arrow-left"></i> BACK TO SUBSCRIPTION</button>
       </div>
     </div>
-    <!-- No other buttons – user is stuck until timeout or activation -->
   </div>
 
-  <!-- MARKET MODAL (unchanged) -->
+  <!-- MARKET MODAL -->
   <div id="market-modal" class="modal-overlay">
     <div class="modal-content">
       <h3 id="modal-market-title">KALYAN</h3>
@@ -632,7 +673,7 @@
     </div>
   </div>
 
-  <!-- PROFILE PAGE (fixed) -->
+  <!-- PROFILE PAGE -->
   <div id="profile-page" class="page">
     <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
     <h2>PROFILE</h2>
@@ -654,7 +695,7 @@
     <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
   </div>
 
-  <!-- INFO PAGE (fixed) -->
+  <!-- INFO PAGE -->
   <div id="info-page" class="page">
     <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
     <h2>INFO</h2>
@@ -688,15 +729,9 @@
 
       markets: {
         kalyan: {
-          name: "KALYAN",
-          time: "2:30 PM",
+          name: "KALYAN", time: "2:30 PM",
           labels: { otc: "O.T.C", support: "SUPPORT", jodi: "JODI", pannel: "PANNEL" },
-          numbers: {
-            otc: "5* 3* 6* 2*",        // ← change these
-            support: "5* 3*",           // ← change these
-            jodi: "53 35 62 26",        // ← change these
-            pannel: "123* 145* 245* 356*" // ← change these
-          }
+          numbers: { otc: "5* 3* 6* 2*", support: "5* 3*", jodi: "53 35 62 26", pannel: "123* 145* 245* 356*" }
         },
         sridevi: {
           name: "SRIDEVI", time: "10:00 AM",
@@ -729,33 +764,23 @@
           numbers: { otc: "4* 8* 1* 7*", support: "4* 8*", jodi: "48 84 17 71", pannel: "148* 147* 178* 187*" }
         }
       },
-
       noticeBoard: "📢 Welcome to FIX GAME 777 platform.\nNew results every day at scheduled times.\nFollow us for updates."
     };
 
-    // ---------- Firebase Config ----------
-    const firebaseConfig = {
-      apiKey: "AIzaSyC7mxOFOYebaxV8dAwpfP7a_Ayq7TAIbds",
-      authDomain: "fixgame-fa24c.firebaseapp.com",
-      projectId: "fixgame-fa24c",
-      storageBucket: "fixgame-fa24c.firebasestorage.app",
-      messagingSenderId: "242917437907",
-      appId: "1:242917437907:web:ee29a01f9290cf6b6c7f26",
-      measurementId: "G-ZFB6GN6PX7"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-    const db = firebase.firestore();
+    // ---------- Global variables ----------
+    const config = marketConfig;
+    let auth = null;
+    let db = null;
+    let processingInterval = null;
+    let processingEndTime = null;
+    const PROCESSING_TIMEOUT = 10 * 60 * 1000; // 10 minutes
 
-    const config = marketConfig; // use the embedded config
-
-    // ---------- Helper Functions ----------
+    // ---------- Helper Functions (defined early) ----------
     function showPage(pageId) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById(pageId).classList.add('active');
     }
 
-    // UPDATED: showMarketModal with live date and time
     function showMarketModal(marketKey) {
       const market = config.markets[marketKey];
       if (!market) return;
@@ -798,36 +823,32 @@
     }
 
     async function ensureUserDocument(user) {
-      if (!user) return null;
-      const userRef = db.collection('users').doc(user.uid);
-      const doc = await userRef.get();
-      if (!doc.exists) {
-        const mobile = user.email ? user.email.replace('@matka.com','') : '';
-        await userRef.set({
-          mobile: mobile,
-          subscriptionActive: false,
-          createdAt: firebase.firestore.FieldValue.serverTimestamp()
-        });
+      if (!user || !db) return null;
+      try {
+        const userRef = db.collection('users').doc(user.uid);
+        const doc = await userRef.get();
+        if (!doc.exists) {
+          const mobile = user.email ? user.email.replace('@matka.com','') : '';
+          await userRef.set({
+            mobile: mobile,
+            subscriptionActive: false,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+          });
+          return { subscriptionActive: false };
+        } else {
+          return doc.data();
+        }
+      } catch (e) {
+        console.error('Firestore error', e);
         return { subscriptionActive: false };
-      } else {
-        return doc.data();
       }
     }
 
-    // ---------- Processing Timer ----------
-    let processingInterval = null;
-    let processingEndTime = null;
-    const PROCESSING_TIMEOUT = 10 * 60 * 1000; // 10 minutes
-
     function startProcessing(plan) {
-      const user = auth.currentUser;
-      if (!user) return;
-
-      // Store end time in sessionStorage to survive refresh
+      if (!auth?.currentUser) return;
       const endTime = Date.now() + PROCESSING_TIMEOUT;
       sessionStorage.setItem('processingEndTime', endTime);
       sessionStorage.setItem('processingPlan', plan);
-
       showProcessingPage();
     }
 
@@ -839,17 +860,13 @@
       failEl.style.display = 'none';
       backBtn.style.display = 'none';
 
-      // Retrieve end time from sessionStorage
       const storedEnd = sessionStorage.getItem('processingEndTime');
       if (!storedEnd) {
-        // No active processing, go back to subscription
         showPage('subscription-page');
         return;
       }
       processingEndTime = parseInt(storedEnd, 10);
-      const now = Date.now();
-      if (processingEndTime <= now) {
-        // Timer already expired
+      if (processingEndTime <= Date.now()) {
         failEl.style.display = 'block';
         backBtn.style.display = 'block';
         timerEl.innerText = '';
@@ -873,24 +890,22 @@
         const secs = Math.floor((remaining % 60000) / 1000);
         timerEl.innerText = `⏳ Time left: ${mins}:${secs < 10 ? '0' : ''}${secs}`;
 
-        // Check subscription status
-        const user = auth.currentUser;
-        if (user) {
-          const doc = await db.collection('users').doc(user.uid).get();
-          if (doc.exists && doc.data().subscriptionActive === true) {
-            // Payment verified!
-            clearInterval(processingInterval);
-            processingInterval = null;
-            sessionStorage.removeItem('processingEndTime');
-            sessionStorage.removeItem('processingPlan');
-            alert('Payment verified! Redirecting to dashboard.');
-            showPage('dashboard-page');
-          }
+        if (auth?.currentUser && db) {
+          try {
+            const doc = await db.collection('users').doc(auth.currentUser.uid).get();
+            if (doc.exists && doc.data().subscriptionActive === true) {
+              clearInterval(processingInterval);
+              processingInterval = null;
+              sessionStorage.removeItem('processingEndTime');
+              sessionStorage.removeItem('processingPlan');
+              alert('Payment verified! Redirecting to dashboard.');
+              showPage('dashboard-page');
+            }
+          } catch (e) { console.error(e); }
         }
       }, 3000);
     }
 
-    // ---------- Toast and Loading ----------
     function showReloadToast() {
       const toast = document.getElementById('toast');
       toast.classList.add('show');
@@ -899,30 +914,57 @@
     window.addEventListener('pageshow', showReloadToast);
     showReloadToast();
 
-    if (!document.getElementById('loading-screen')) {
-      const ld = document.createElement('div');
-      ld.id = 'loading-screen';
-      ld.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:#030712; display:flex; align-items:center; justify-content:center; z-index:9999;';
-      ld.innerHTML = '<div style="text-align:center; color:#38bdf8;"><div style="font-size:3rem;">🕉️</div><div>loading ...</div></div>';
-      document.body.appendChild(ld);
-    }
+    // ---------- Loading Screen Removal (guaranteed) ----------
+    const loadingScreen = document.createElement('div');
+    loadingScreen.id = 'loading-screen';
+    loadingScreen.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:#030712; display:flex; align-items:center; justify-content:center; z-index:9999; transition:opacity 0.3s;';
+    loadingScreen.innerHTML = '<div style="text-align:center; color:#38bdf8;"><div style="font-size:3rem;">🕉️</div><div>loading ...</div></div>';
+    document.body.appendChild(loadingScreen);
+
     function hideLoading() {
       const loader = document.getElementById('loading-screen');
-      if (loader) { loader.style.opacity = '0'; setTimeout(() => loader.remove(), 300); }
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.remove(), 300);
+      }
     }
 
-    // ---------- Back Button Handling ----------
+    // Force hide after 3 seconds no matter what
+    setTimeout(hideLoading, 3000);
+
+    // ---------- Firebase Initialization ----------
+    try {
+      const firebaseConfig = {
+        apiKey: "AIzaSyC7mxOFOYebaxV8dAwpfP7a_Ayq7TAIbds",
+        authDomain: "fixgame-fa24c.firebaseapp.com",
+        projectId: "fixgame-fa24c",
+        storageBucket: "fixgame-fa24c.firebasestorage.app",
+        messagingSenderId: "242917437907",
+        appId: "1:242917437907:web:ee29a01f9290cf6b6c7f26",
+        measurementId: "G-ZFB6GN6PX7"
+      };
+      firebase.initializeApp(firebaseConfig);
+      auth = firebase.auth();
+      db = firebase.firestore();
+      console.log('Firebase initialized');
+    } catch (e) {
+      console.error('Firebase init error', e);
+      // Show error on login page
+      document.getElementById('login-error').innerText = 'Firebase configuration error. Please contact admin.';
+      document.getElementById('login-error').style.display = 'block';
+    }
+
+    // ---------- Back Button ----------
     let backPressedOnce = false;
     window.addEventListener('popstate', (e) => {
-      const cur = document.querySelector('.page.active').id;
+      const cur = document.querySelector('.page.active')?.id;
       if (cur === 'login-page') {
         if (backPressedOnce) { if (confirm('Exit app?')) window.history.back(); }
         else { backPressedOnce = true; alert('Press back again to exit'); setTimeout(() => backPressedOnce = false, 2000); history.pushState({},''); }
       } else if (cur === 'register-page') {
         showPage('login-page');
       } else if (cur === 'processing-page') {
-        // Do nothing – stay on processing page
-        history.pushState({}, ''); // prevent back
+        history.pushState({}, '');
       } else if (cur === 'profile-page' || cur === 'info-page') {
         showPage('dashboard-page');
       } else {
@@ -931,12 +973,11 @@
     });
     history.pushState({}, '');
 
-    // ---------- Event Listeners ----------
+    // ---------- DOM Ready ----------
     document.addEventListener('DOMContentLoaded', function() {
       applyMarketTimesAndNotices();
       updateDateTime();
 
-      // Check if we were in processing on previous load
       if (sessionStorage.getItem('processingEndTime')) {
         showProcessingPage();
       }
@@ -946,6 +987,7 @@
       // Login
       document.getElementById('login-btn').addEventListener('click', (e) => {
         e.preventDefault();
+        if (!auth) { alert('Firebase not ready'); return; }
         const mobile = document.getElementById('login-mobile').value.trim();
         const pw = document.getElementById('login-password').value.trim();
         const err = document.getElementById('login-error');
@@ -964,6 +1006,7 @@
       // Register
       document.getElementById('register-btn').addEventListener('click', async (e) => {
         e.preventDefault();
+        if (!auth) { alert('Firebase not ready'); return; }
         const name = document.getElementById('reg-name').value.trim();
         const mobile = document.getElementById('reg-mobile').value.trim();
         const pw = document.getElementById('reg-password').value.trim();
@@ -988,13 +1031,11 @@
         }
       });
 
-      // Logout
-      document.getElementById('logout').addEventListener('click', () => auth.signOut());
+      document.getElementById('logout').addEventListener('click', () => auth?.signOut());
 
-      // Paid button – start processing
+      // Paid button
       document.getElementById('paid-btn').addEventListener('click', async () => {
-        const user = auth.currentUser;
-        if (!user) { alert('Login required'); return; }
+        if (!auth?.currentUser) { alert('Login required'); return; }
         if (!config?.adminWhatsApp) { alert('Configuration error'); return; }
 
         let plan = '1 day';
@@ -1004,15 +1045,15 @@
         }
 
         try {
+          const user = auth.currentUser;
           const data = await ensureUserDocument(user);
-          const mobile = data.mobile || user.email?.split('@')[0] || '';
+          const mobile = data?.mobile || user.email?.split('@')[0] || '';
           const msg = `PAYMENT REQUEST%0AMobile: ${mobile}%0APlan: ${plan}%0AUID: ${user.uid}`;
           window.open(`https://wa.me/${config.adminWhatsApp.replace(/\D/g,'')}?text=${msg}`, '_blank');
           startProcessing(plan);
         } catch (er) { alert('Error: ' + er.message); }
       });
 
-      // Cancel processing (only shown after timeout)
       document.getElementById('cancel-processing').addEventListener('click', () => {
         if (processingInterval) clearInterval(processingInterval);
         processingInterval = null;
@@ -1021,7 +1062,6 @@
         showPage('subscription-page');
       });
 
-      // Plan selection
       document.getElementById('plan-1day').addEventListener('click', function() {
         document.querySelectorAll('.plan-card').forEach(p => p.classList.remove('selected'));
         this.classList.add('selected');
@@ -1039,66 +1079,53 @@
       document.getElementById('back-from-profile')?.addEventListener('click', () => showPage('dashboard-page'));
       document.getElementById('back-from-info')?.addEventListener('click', () => showPage('dashboard-page'));
 
-      // Close modal
       document.getElementById('close-modal-btn').addEventListener('click', () => {
         document.getElementById('market-modal').classList.remove('show');
       });
 
-      // Market item clicks – if not subscribed, go to subscription page
+      // Market clicks
       document.querySelectorAll('.market-item').forEach(el => {
         el.addEventListener('click', async (e) => {
           const key = e.currentTarget.getAttribute('data-market');
           if (!key) return;
-          const user = auth.currentUser;
+          const user = auth?.currentUser;
           if (!user) { showPage('login-page'); return; }
 
           try {
             const data = await ensureUserDocument(user);
-            if (data.subscriptionActive === true) {
+            if (data?.subscriptionActive === true) {
               showMarketModal(key);
             } else {
-              // Redirect to subscription page
               showPage('subscription-page');
             }
           } catch (err) {
             console.error(err);
-            alert('Error checking subscription.');
+            showPage('subscription-page');
           }
         });
       });
 
       // Auth observer
-      let authInit = false;
-      auth.onAuthStateChanged(async user => {
-        if (!authInit) authInit = true;
-        if (!user && processingInterval) {
-          clearInterval(processingInterval); processingInterval = null;
-          sessionStorage.removeItem('processingEndTime');
-          sessionStorage.removeItem('processingPlan');
-        }
+      auth?.onAuthStateChanged(async user => {
         if (user) {
           try {
             const data = await ensureUserDocument(user);
-            const greeting = document.getElementById('dashboard-greeting');
-            if (greeting) greeting.innerText = `Welcome, ${user.displayName || 'User'}`;
-            const statusEl = document.getElementById('dashboard-status');
-            if (statusEl) statusEl.innerText = data.subscriptionActive ? 'Active' : 'Inactive';
+            document.getElementById('dashboard-greeting').innerText = `Welcome, ${user.displayName || 'User'}`;
+            document.getElementById('dashboard-status').innerText = data?.subscriptionActive ? 'Active' : 'Inactive';
             document.getElementById('profile-name').innerText = user.displayName || 'User';
-            document.getElementById('profile-mobile').innerText = data.mobile || (user.email ? user.email.replace('@matka.com','') : '');
-            document.getElementById('sub-status').innerText = data.subscriptionActive ? 'Active' : 'Inactive';
-            if (data.createdAt) {
+            document.getElementById('profile-mobile').innerText = data?.mobile || (user.email ? user.email.replace('@matka.com','') : '');
+            document.getElementById('sub-status').innerText = data?.subscriptionActive ? 'Active' : 'Inactive';
+            if (data?.createdAt) {
               const d = data.createdAt.toDate ? data.createdAt.toDate() : new Date();
               document.getElementById('profile-join').innerText = d.toLocaleDateString();
             }
-            // If we're on processing page and subscription became active, redirect
-            if (document.getElementById('processing-page').classList.contains('active') && data.subscriptionActive) {
+            if (document.getElementById('processing-page').classList.contains('active') && data?.subscriptionActive) {
               clearInterval(processingInterval);
               processingInterval = null;
               sessionStorage.removeItem('processingEndTime');
               sessionStorage.removeItem('processingPlan');
               showPage('dashboard-page');
             } else if (!document.getElementById('processing-page').classList.contains('active')) {
-              // Only auto-redirect to dashboard if not on processing page
               showPage('dashboard-page');
             }
           } catch { 
@@ -1109,10 +1136,15 @@
         } else {
           showPage('login-page');
         }
-        if (authInit) hideLoading();
+        // Hide loading if still visible
+        hideLoading();
       });
-      setTimeout(hideLoading, 3000);
+
+      // Additional safety: hide loading after a short delay if auth observer didn't fire
+      setTimeout(() => {
+        hideLoading();
+      }, 3000);
     });
   </script>
 </body>
-</html>
+  </html>
