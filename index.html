@@ -6,7 +6,7 @@
   <title>DATE FIX 777 · premium matka</title>
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Font: Inter (more professional) -->
+  <!-- Google Font: Inter (clean, professional) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -14,13 +14,13 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(145deg, #1e1b4b, #2e1065);
+      background: linear-gradient(145deg, #f5f5f5, #e0e0e0);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 1rem;
-      color: #f8fafc;
+      color: #1a1a1a;
     }
     #app {
       width: 100%;
@@ -28,13 +28,12 @@
       margin: 0 auto;
     }
     .page {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #ffffff;
+      backdrop-filter: none;
+      border: 1px solid #d1d1d1;
       border-radius: 2.5rem;
       padding: 2rem 1.5rem;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
       animation: pageEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       display: none;
     }
@@ -46,21 +45,21 @@
     h2 {
       font-size: 2.2rem;
       font-weight: 700;
-      background: linear-gradient(135deg, #a78bfa, #60a5fa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #000000;
       text-align: center;
       margin-bottom: 1.5rem;
       letter-spacing: -0.02em;
+      border-bottom: 2px solid #000000;
+      padding-bottom: 0.5rem;
     }
     .logo-banner {
       width: 100%;
       margin: 1rem 0 1.5rem;
       border-radius: 2rem;
       overflow: hidden;
-      border: 2px solid #818cf8;
-      box-shadow: 0 15px 30px -15px #312e81;
-      background: #0f172a;
+      border: 2px solid #000000;
+      box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+      background: #ffffff;
     }
     .logo-banner img {
       width: 100%;
@@ -70,10 +69,10 @@
     .big-image {
       width: 100%;
       border-radius: 2rem;
-      border: 2px solid #818cf8;
+      border: 2px solid #000000;
       overflow: hidden;
       margin: 1.2rem 0;
-      box-shadow: 0 15px 30px -15px #00000080;
+      box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
       transition: transform 0.3s;
     }
     .big-image:hover { transform: scale(1.02); }
@@ -85,7 +84,7 @@
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: #cbd5e1;
+      color: #4a4a4a;
       margin-bottom: 0.4rem;
       margin-left: 0.8rem;
     }
@@ -95,23 +94,23 @@
       left: 1.2rem;
       top: 50%;
       transform: translateY(-50%);
-      color: #818cf8;
+      color: #000000;
       font-size: 1.2rem;
     }
     .input-wrapper input {
       width: 100%;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid #334155;
+      background: #fafafa;
+      border: 1px solid #b0b0b0;
       border-radius: 3rem;
       padding: 1.2rem 1.5rem 1.2rem 3.2rem;
       font-size: 1rem;
-      color: #f1f5f9;
+      color: #1a1a1a;
       outline: none;
       transition: border 0.2s, box-shadow 0.2s;
     }
     .input-wrapper input:focus {
-      border-color: #818cf8;
-      box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2);
+      border-color: #000000;
+      box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
     }
     .btn {
       display: block;
@@ -127,9 +126,9 @@
       cursor: pointer;
       transition: all 0.2s;
       margin: 1.5rem 0 1rem;
-      background: linear-gradient(135deg, #818cf8, #6366f1);
-      color: white;
-      box-shadow: 0 15px 25px -12px #4f46e5;
+      background: #000000;
+      color: #ffffff;
+      box-shadow: 0 10px 20px -8px rgba(0,0,0,0.3);
       position: relative;
       overflow: hidden;
     }
@@ -144,84 +143,84 @@
       transition: left 0.5s;
     }
     .btn:hover::after { left: 100%; }
-    .btn:hover { transform: translateY(-3px); }
+    .btn:hover { transform: translateY(-3px); background: #333333; }
     .btn-small { padding: 0.9rem; font-size: 1rem; margin: 0.8rem 0; }
     .btn:disabled { opacity: 0.5; pointer-events: none; }
-.helpline-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 2rem;
-  padding: 1rem;
-  margin: 1rem 0;
-  border: 1px solid #4f46e5;
-  display: flex;
-  justify-content: space-around;
-}
-.helpline-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: #e2e8f0;
-  padding: 0.6rem 1.2rem;
-  border-radius: 3rem;
-  text-decoration: none;
-  font-weight: 600;
-  border: 1px solid #4f46e5;
-  transition: background 0.2s;
-}
-.helpline-link i { color: #818cf8; font-size: 1.2rem; }
-.helpline-link:hover { background: rgba(255, 255, 255, 0.2); }
 
-.market-list { list-style: none; }
-.market-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 2rem;
-  margin-bottom: 0.8rem;
-  border: 1px solid #334155;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-.market-item:hover {
-  transform: translateX(8px);
-  border-color: #818cf8;
-  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
-}
-.market-item::before {
-  content: '\f054';
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 900;
-  color: #818cf8;
-  margin-right: 0.8rem;
-  font-size: 0.9rem;
-  transition: transform 0.2s;
-}
-.market-item:hover::before { transform: translateX(4px); }
-.market-time {
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
-  color: white;
-  padding: 0.3rem 1rem;
-  border-radius: 2rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-.notice {
-  background: rgba(0, 0, 0, 0.3);
-  color: #cbd5e1;
-  padding: 1.2rem;
-  border-radius: 2rem;
-  border-left: 6px solid #818cf8;
-  margin: 1.5rem 0;
-  white-space: pre-line;
-  box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
-}
+    .helpline-card {
+      background: #f5f5f5;
+      border-radius: 2rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      border: 1px solid #b0b0b0;
+      display: flex;
+      justify-content: space-around;
+    }
+    .helpline-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #ffffff;
+      color: #000000;
+      padding: 0.6rem 1.2rem;
+      border-radius: 3rem;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid #000000;
+      transition: background 0.2s;
+    }
+    .helpline-link i { color: #000000; font-size: 1.2rem; }
+    .helpline-link:hover { background: #f0f0f0; }
 
-/* New Subscription Card Design */
+    .market-list { list-style: none; }
+    .market-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.2rem;
+      background: #fafafa;
+      border-radius: 2rem;
+      margin-bottom: 0.8rem;
+      border: 1px solid #d1d1d1;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .market-item:hover {
+      transform: translateX(8px);
+      border-color: #000000;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .market-item::before {
+      content: '\f054';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: #000000;
+      margin-right: 0.8rem;
+      font-size: 0.9rem;
+      transition: transform 0.2s;
+    }
+    .market-item:hover::before { transform: translateX(4px); }
+    .market-time {
+      background: #000000;
+      color: #ffffff;
+      padding: 0.3rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .notice {
+      background: #f5f5f5;
+      color: #1a1a1a;
+      padding: 1.2rem;
+      border-radius: 2rem;
+      border-left: 6px solid #000000;
+      margin: 1.5rem 0;
+      white-space: pre-line;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    }
+    /* Subscription Cards – Minimalist Black & White */
 .plan-container {
   display: flex;
   flex-direction: column;
@@ -231,90 +230,101 @@
 .plan-card {
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #334155;
+  background: #fafafa;
+  border: 1px solid #d1d1d1;
   border-radius: 2rem;
   padding: 1.5rem;
   cursor: pointer;
   transition: all 0.3s;
 }
 .plan-card.selected {
-  border-color: #818cf8;
-  background: linear-gradient(145deg, rgba(129, 140, 248, 0.2), rgba(99, 102, 241, 0.1));
+  border-color: #000000;
+  background: #ffffff;
   transform: scale(1.02);
-  box-shadow: 0 10px 20px -8px #4f46e5;
+  box-shadow: 0 10px 20px -8px rgba(0,0,0,0.2);
 }
 .plan-card .plan-icon {
   font-size: 2rem;
-  color: #818cf8;
+  color: #000000;
   margin-right: 1.5rem;
 }
 .plan-card .plan-info { flex: 1; }
 .plan-card .plan-name {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #000000;
 }
 .plan-card .plan-price {
   font-size: 1.8rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #a78bfa, #60a5fa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #000000;
 }
 .plan-card .plan-features {
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: #4a4a4a;
   margin-top: 0.3rem;
 }
 
 .qr-section {
   text-align: center;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem; /* reduced bottom margin to make room for button */
 }
 .qr-image {
   width: 200px;
   height: 200px;
   border-radius: 2rem;
-  border: 3px solid #818cf8;
+  border: 3px solid #000000;
   margin: 1rem auto;
-  box-shadow: 0 20px 30px -10px black;
+  box-shadow: 0 15px 25px -10px rgba(0,0,0,0.2);
 }
 .upi-info {
-  background: rgba(0, 0, 0, 0.3);
+  background: #f5f5f5;
   padding: 0.8rem;
   border-radius: 2rem;
-  border: 1px dashed #818cf8;
+  border: 1px dashed #000000;
   font-size: 0.9rem;
-  color: #cbd5e1;
+  color: #1a1a1a;
+}
+
+/* Big "I HAVE PAID" button under QR */
+.paid-btn-large {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.paid-btn-large .btn {
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  background: #000000;
+  border-radius: 3rem;
 }
 
 .welcome-card {
-  background: linear-gradient(145deg, #312e81, #1e1b4b);
+  background: #f5f5f5;
   border-radius: 2rem;
   padding: 1.5rem;
   margin: 1rem 0;
-  border: 1px solid #818cf8;
+  border: 1px solid #b0b0b0;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.welcome-card i { font-size: 2.5rem; color: #c084fc; }
+.welcome-card i { font-size: 2.5rem; color: #000000; }
 .welcome-text { flex: 1; }
-.welcome-text h3 { font-size: 1.2rem; color: white; }
+.welcome-text h3 { font-size: 1.2rem; color: #000000; }
 .status-badge {
   display: inline-block;
-  background: #4f46e5;
-  color: white;
+  background: #000000;
+  color: #ffffff;
   padding: 0.3rem 1rem;
   border-radius: 2rem;
   font-weight: 600;
   font-size: 0.8rem;
 }
-    .modal-overlay {
+        .modal-overlay {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.7);
       backdrop-filter: blur(8px);
       display: flex;
       align-items: center;
@@ -329,16 +339,16 @@
       pointer-events: auto;
     }
     .modal-content {
-      background: #0f172a;
+      background: #ffffff;
       border-radius: 2.5rem;
       padding: 2rem;
       max-width: 90%;
       width: 400px;
-      border: 2px solid #818cf8;
+      border: 2px solid #000000;
       box-shadow: 0 30px 50px -20px black;
     }
     .modal-content h3 {
-      color: #c084fc;
+      color: #000000;
       text-align: center;
       margin-bottom: 1.5rem;
       font-size: 1.8rem;
@@ -350,19 +360,19 @@
       margin: 1.5rem 0;
     }
     .result-item {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid #334155;
+      background: #f5f5f5;
+      border: 1px solid #d1d1d1;
       border-radius: 1.5rem;
       padding: 1rem;
       text-align: center;
     }
     .result-item .label {
-      color: #94a3b8;
+      color: #4a4a4a;
       font-size: 0.8rem;
       margin-bottom: 0.3rem;
     }
     .result-item .value {
-      color: #fbbf24;
+      color: #000000;
       font-size: 1.2rem;
       font-weight: 700;
     }
@@ -370,10 +380,10 @@
       display: block;
       width: 100%;
       padding: 0.8rem;
-      background: #334155;
+      background: #e0e0e0;
       border: none;
       border-radius: 3rem;
-      color: white;
+      color: #000000;
       font-weight: 600;
       cursor: pointer;
       margin-top: 1rem;
@@ -384,8 +394,8 @@
       padding: 2rem 1rem;
     }
     .spinner {
-      border: 4px solid rgba(255,255,255,0.1);
-      border-left-color: #818cf8;
+      border: 4px solid #e0e0e0;
+      border-left-color: #000000;
       border-radius: 50%;
       width: 60px;
       height: 60px;
@@ -394,12 +404,12 @@
     }
     @keyframes spin { to { transform: rotate(360deg); } }
     .fail-message {
-      background: rgba(220, 38, 38, 0.2);
-      border: 1px solid #ef4444;
+      background: #ffeeee;
+      border: 1px solid #cc0000;
       border-radius: 2rem;
       padding: 1rem;
       margin: 1rem 0;
-      color: #fecaca;
+      color: #cc0000;
     }
 
     .nav-bar {
@@ -408,9 +418,9 @@
       margin: 1.5rem 0 0.5rem;
     }
     .nav-btn {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid #4f46e5;
-      color: #a78bfa;
+      background: #ffffff;
+      border: 1px solid #000000;
+      color: #000000;
       font-weight: 600;
       padding: 0.6rem 1.2rem;
       border-radius: 3rem;
@@ -421,8 +431,7 @@
       transition: 0.2s;
     }
     .nav-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: #818cf8;
+      background: #f0f0f0;
     }
     .extra-refresh {
       display: flex;
@@ -435,10 +444,11 @@
       bottom: 2rem;
       left: 50%;
       transform: translateX(-50%);
-      background: #1e1b4b;
+      background: #000000;
+      color: #ffffff;
       padding: 0.8rem 1.8rem;
       border-radius: 3rem;
-      border: 1px solid #818cf8;
+      border: 1px solid #ffffff;
       display: flex;
       gap: 0.8rem;
       z-index: 10000;
@@ -449,9 +459,9 @@
     #toast.show { opacity: 1; }
 
     .error-message {
-      color: #fecaca;
-      background: rgba(220, 38, 38, 0.2);
-      border: 1px solid #ef4444;
+      color: #cc0000;
+      background: #ffeeee;
+      border: 1px solid #cc0000;
       border-radius: 3rem;
       padding: 0.6rem;
       text-align: center;
@@ -459,10 +469,10 @@
     }
     .disclaimer {
       font-size: 0.6rem;
-      color: #94a3b8;
+      color: #4a4a4a;
       margin-top: 2rem;
       padding-top: 1rem;
-      border-top: 1px solid #334155;
+      border-top: 1px solid #d1d1d1;
       max-height: 100px;
       overflow-y: auto;
     }
@@ -471,7 +481,7 @@
 <body>
   <div id="toast"><i class="fas fa-sync-alt"></i> Page reloaded</div>
   <div id="app">
-<!-- LOGIN PAGE -->
+    <!-- LOGIN PAGE -->
 <div id="login-page" class="page active">
   <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
   <h2>DATE FIX 777</h2>
@@ -479,8 +489,8 @@
     <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/c33ecce6-da20-4047-a0ce-df100fbd6657.png" alt="Logo">
   </div>
   <div style="text-align:center; margin-bottom:1.5rem;">
-    <div style="font-weight:500; color:#cbd5e1;">MOST TRUSTED MATKA GUESSING</div>
-    <div style="font-size:0.85rem; color:#94a3b8;">DATE FIX GAME PLATFORM</div>
+    <div style="font-weight:500; color:#4a4a4a;">MOST TRUSTED MATKA GUESSING</div>
+    <div style="font-size:0.85rem; color:#6c757d;">DATE FIX GAME PLATFORM</div>
   </div>
 
   <div class="input-group">
@@ -500,7 +510,7 @@
   <div id="login-error" class="error-message" style="display: none;"></div>
 
   <button class="btn" id="login-btn">LOGIN</button>
-  <button class="btn" id="goto-register-btn" style="background:linear-gradient(135deg, #6b7280, #4b5563);">CREATE ACCOUNT</button>
+  <button class="btn" id="goto-register-btn" style="background:#4a4a4a;">CREATE ACCOUNT</button>
 
   <div class="helpline-card">
     <a href="https://wa.me/917353547650" target="_blank" class="helpline-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -508,7 +518,7 @@
   </div>
 
   <div class="disclaimer">
-    <strong style="color:#818cf8;">-DISCLAIMER:-</strong> Visiting this site and browsing it is strictly recommended at your own risk...
+    <strong style="color:#000;">-DISCLAIMER:-</strong> Visiting this site and browsing it is strictly recommended at your own risk...
   </div>
   <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
 </div>
@@ -551,7 +561,7 @@
   <div id="register-error" class="error-message" style="display: none;"></div>
 
   <button class="btn" id="register-btn">SIGN UP</button>
-  <button class="btn" id="back-to-login-btn" style="background:linear-gradient(135deg, #6b7280, #4b5563); margin-top:0;">BACK TO LOGIN</button>
+  <button class="btn" id="back-to-login-btn" style="background:#4a4a4a; margin-top:0;">BACK TO LOGIN</button>
 
   <div class="helpline-card">
     <a href="https://wa.me/917353547650" target="_blank" class="helpline-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -565,12 +575,12 @@
   <div style="display:flex; justify-content:space-between; align-items:center;">
     <h2 style="margin:0; font-size:2rem;">DASHBOARD</h2>
     <div style="text-align:right;">
-      <span id="live-date" style="display:block; font-size:0.75rem; color:#94a3b8;"></span>
-      <span id="live-time" style="font-weight:600; color:#818cf8; font-size:1.1rem;"></span>
+      <span id="live-date" style="display:block; font-size:0.75rem; color:#6c757d;"></span>
+      <span id="live-time" style="font-weight:600; color:#000; font-size:1.1rem;"></span>
     </div>
   </div>
 
-  <!-- Welcome card at top -->
+  <!-- Welcome card -->
   <div class="welcome-card">
     <i class="fas fa-crown"></i>
     <div class="welcome-text">
@@ -581,7 +591,7 @@
 
   <!-- Notice board -->
   <div class="notice" id="dashboard-notice">
-    <strong style="color:#818cf8;">📢 NOTICE BOARD</strong><br>
+    <strong style="color:#000;">📢 NOTICE BOARD</strong><br>
   </div>
 
   <!-- First image -->
@@ -623,7 +633,7 @@
   </div>
   <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
 </div>
-  <!-- SUBSCRIPTION PAGE (new attractive design) -->
+  <!-- SUBSCRIPTION PAGE – with large I HAVE PAID button under QR -->
   <div id="subscription-page" class="page">
     <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
     <div class="big-image">
@@ -632,7 +642,7 @@
 
     <h2>MEMBERSHIP</h2>
 
-    <!-- New plan cards with icons -->
+    <!-- Plan cards -->
     <div class="plan-container">
       <div class="plan-card" id="plan-1day">
         <div class="plan-icon"><i class="fas fa-bolt"></i></div>
@@ -653,13 +663,18 @@
     </div>
 
     <div class="qr-section">
-      <p style="color:#94a3b8;">Select plan & scan QR to pay</p>
+      <p style="color:#4a4a4a;">Select plan & scan QR to pay</p>
       <img src="https://i.supaimg.com/d026f774-60e1-4925-88e1-75281544a80e/0e62c615-2776-42a3-99b4-252c5fb435c1.png" alt="QR" class="qr-image">
       <div class="upi-info">
         <i class="fas fa-qrcode"></i> UPI ID: mayursinh.72rathod72@okhdfcbank
       </div>
-      <p style="font-size:0.8rem; color:#94a3b8;">Scan via PhonePe, GPay, Paytm, any UPI</p>
-      <p style="color:#c084fc; font-size:0.9rem; margin-top:0.5rem;">After payment done, send screenshot on WhatsApp or Telegram</p>
+      <p style="font-size:0.8rem; color:#4a4a4a;">Scan via PhonePe, GPay, Paytm, any UPI</p>
+      <p style="color:#000; font-size:0.9rem; margin-top:0.5rem;">After payment done, send screenshot on WhatsApp or Telegram</p>
+    </div>
+
+    <!-- Large I HAVE PAID button directly under QR -->
+    <div class="paid-btn-large">
+      <button class="btn" id="paid-btn">I HAVE PAID</button>
     </div>
 
     <div class="helpline-card">
@@ -667,16 +682,16 @@
       <a href="tel:+917353547650" class="helpline-link"><i class="fas fa-phone-alt"></i> Call</a>
     </div>
 
-    <!-- Telegram deep link -->
+    <!-- Telegram links -->
     <div style="text-align:center; margin:0.5rem 0 1rem;">
-      <span style="color:#94a3b8;">Telegram: </span>
+      <span style="color:#4a4a4a;">Telegram: </span>
       <a href="tg://resolve?domain=rudrakshankg" class="helpline-link" style="display:inline-flex; margin:0.2rem;">Open in App</a>
       <a href="https://t.me/rudrakshankg" class="helpline-link" style="display:inline-flex; margin:0.2rem;">Web</a>
     </div>
 
     <div class="nav-bar">
       <button class="nav-btn" id="back-from-sub"><i class="fas fa-arrow-left"></i> BACK</button>
-      <button class="nav-btn" id="paid-btn">I HAVE PAID</button>
+      <!-- The paid button is already above, so we keep only BACK here -->
     </div>
 
     <div class="big-image">
@@ -691,7 +706,7 @@
     <h2>PROCESSING</h2>
     <div class="processing-container">
       <div class="spinner"></div>
-      <p style="color:#94a3b8; margin:1rem 0;">Waiting for payment confirmation...</p>
+      <p style="color:#4a4a4a; margin:1rem 0;">Waiting for payment confirmation...</p>
       <div id="processing-timer" class="timer-message" style="margin:1rem 0;"></div>
       <div id="processing-fail" style="display: none;" class="fail-message">
         <i class="fas fa-times-circle"></i> Transaction incomplete. Please try again or contact support.
@@ -715,15 +730,15 @@
   <div id="profile-page" class="page">
     <div class="extra-refresh"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH</button></div>
     <h2>PROFILE</h2>
-    <div style="background:rgba(0,0,0,0.3); border-radius:2rem; padding:1.5rem; border:1px solid #4f46e5; text-align:center;">
-      <i class="fas fa-user-circle" style="font-size:4rem; color:#818cf8; margin-bottom:1rem;"></i>
-      <div id="profile-name" style="font-size:1.3rem; font-weight:600; color:#e2e8f0;">-</div>
-      <div id="profile-mobile" style="color:#94a3b8; margin:0.5rem 0;">-</div>
-      <div id="profile-status" style="background:#4f46e5; border-radius:2rem; padding:0.4rem; display:inline-block;">Subscription: <span id="sub-status">Inactive</span></div>
+    <div style="background:#f5f5f5; border-radius:2rem; padding:1.5rem; border:1px solid #b0b0b0; text-align:center;">
+      <i class="fas fa-user-circle" style="font-size:4rem; color:#000; margin-bottom:1rem;"></i>
+      <div id="profile-name" style="font-size:1.3rem; font-weight:600; color:#000;">-</div>
+      <div id="profile-mobile" style="color:#4a4a4a; margin:0.5rem 0;">-</div>
+      <div id="profile-status" style="background:#000; color:#fff; border-radius:2rem; padding:0.4rem; display:inline-block;">Subscription: <span id="sub-status">Inactive</span></div>
     </div>
     <div style="margin:1.5rem 0;">
-      <div style="display:flex; align-items:center; gap:1rem; padding:1rem; background:rgba(0,0,0,0.2); border-radius:2rem; border:1px solid #334155;">
-        <i class="fas fa-calendar-alt" style="color:#818cf8;"></i> Joined: <span id="profile-join">-</span>
+      <div style="display:flex; align-items:center; gap:1rem; padding:1rem; background:#fafafa; border-radius:2rem; border:1px solid #d1d1d1;">
+        <i class="fas fa-calendar-alt" style="color:#000;"></i> Joined: <span id="profile-join">-</span>
       </div>
     </div>
     <div class="nav-bar">
@@ -742,12 +757,12 @@
       <div class="helpline-link" style="justify-content:center;"><i class="fab fa-whatsapp"></i> +91 7353547650</div>
       <div class="helpline-link" style="justify-content:center;">
         <i class="fab fa-telegram"></i> 
-        <a href="tg://resolve?domain=rudrakshankg" style="color:#e2e8f0; text-decoration:none;">@rudrakshankg</a> (App) | 
-        <a href="https://t.me/rudrakshankg" style="color:#e2e8f0;">Web</a>
+        <a href="tg://resolve?domain=rudrakshankg" style="color:#000; text-decoration:none;">@rudrakshankg</a> (App) | 
+        <a href="https://t.me/rudrakshankg" style="color:#000;">Web</a>
       </div>
     </div>
     <div class="notice" style="margin-top:1.5rem;">
-      <strong style="color:#818cf8;">📢 ABOUT</strong><br>
+      <strong style="color:#000;">📢 ABOUT</strong><br>
       DATE FIX 777 is a premium matka guessing platform. All results are based on astrological calculations. We are not affiliated with any illegal business.
     </div>
     <div class="nav-bar">
@@ -757,7 +772,7 @@
     <div class="extra-refresh" style="justify-content:center;"><button class="nav-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> REFRESH PAGE</button></div>
   </div>
 </div> <!-- end #app -->
-  <!-- Firebase SDKs -->
+    <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
@@ -824,13 +839,13 @@
     const auth = firebase.auth();
     const db = firebase.firestore();
 
-    // 🔒 Force session persistence – user will be logged out when browser/tab is closed
+    // 🔒 Force session persistence – user logged out when browser closed
     auth.setPersistence(firebase.auth.Auth.Persistence.SESSION)
       .catch(error => console.error("Persistence error", error));
 
     const config = marketConfig;
 
-    // ---------- Helper Functions (same as before) ----------
+    // ---------- Helper Functions ----------
     function showPage(pageId) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById(pageId).classList.add('active');
@@ -842,7 +857,7 @@
       const now = new Date();
       const dateStr = now.toLocaleDateString('en-IN', { day:'2-digit', month:'short', year:'numeric' });
       const timeStr = now.toLocaleTimeString('en-IN', { hour:'2-digit', minute:'2-digit' });
-      document.getElementById('modal-market-title').innerHTML = `${market.name}<br><span style="font-size:0.8rem; color:#94a3b8;">${dateStr} ${timeStr}</span>`;
+      document.getElementById('modal-market-title').innerHTML = `${market.name}<br><span style="font-size:0.8rem; color:#6c757d;">${dateStr} ${timeStr}</span>`;
       const grid = document.getElementById('modal-result-grid');
       grid.innerHTML = '';
       const items = ['otc', 'support', 'jodi', 'pannel'];
@@ -873,7 +888,7 @@
         }
       });
       document.querySelectorAll('.notice').forEach(el => {
-        el.innerHTML = `<strong style="color:#818cf8;">📢 NOTICE BOARD</strong><br>${config.noticeBoard.replace(/\n/g,'<br>')}`;
+        el.innerHTML = `<strong style="color:#000;">📢 NOTICE BOARD</strong><br>${config.noticeBoard.replace(/\n/g,'<br>')}`;
       });
     }
 
@@ -973,8 +988,8 @@
     if (!document.getElementById('loading-screen')) {
       const ld = document.createElement('div');
       ld.id = 'loading-screen';
-      ld.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:#1e1b4b; display:flex; align-items:center; justify-content:center; z-index:9999;';
-      ld.innerHTML = '<div style="text-align:center; color:white;"><div style="font-size:3rem;">🕉️</div><div>loading ...</div></div>';
+      ld.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:#f5f5f5; display:flex; align-items:center; justify-content:center; z-index:9999;';
+      ld.innerHTML = '<div style="text-align:center; color:#000;"><div style="font-size:3rem;">🕉️</div><div>loading ...</div></div>';
       document.body.appendChild(ld);
     }
     function hideLoading() {
@@ -1060,7 +1075,7 @@
 
       document.getElementById('logout').addEventListener('click', () => auth.signOut());
 
-      // Paid button
+      // Paid button (now large, but same ID)
       document.getElementById('paid-btn').addEventListener('click', async () => {
         const user = auth.currentUser;
         if (!user) { alert('Login required'); return; }
@@ -1089,6 +1104,7 @@
         showPage('subscription-page');
       });
 
+      // Plan selection
       document.getElementById('plan-1day').addEventListener('click', function() {
         document.querySelectorAll('.plan-card').forEach(p => p.classList.remove('selected'));
         this.classList.add('selected');
